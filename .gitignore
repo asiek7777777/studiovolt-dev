@@ -1,0 +1,13 @@
+# Claude Code / AI tools
+.claude/
+_bmad/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+*.swp
+*.swo
+*~
