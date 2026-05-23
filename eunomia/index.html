@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eunomia — your private space for clearer thinking — Studio Volt</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #0a0a0a;
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+      .header {
+        padding: 2rem;
+        text-align: center;
+        border-bottom: 1px solid #1e1e1e;
+      }
+      .header h1 {
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+      .header h1 span {
+        color: #98ffd9;
+      }
+      .header p {
+        color: #94a3b8;
+        margin-top: 0.25rem;
+        font-size: 0.9rem;
+      }
+      .nav {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        padding: 1rem;
+        border-bottom: 1px solid #1e1e1e;
+      }
+      .nav a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+      .nav a:hover,
+      .nav a.active {
+        color: #98ffd9;
+      }
+      .content {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem 4rem;
+      }
+      .hero {
+        text-align: center;
+        padding: 2rem 0 3rem;
+      }
+      .hero h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        color: #f8fafc;
+      }
+      .hero h2 em {
+        color: #98ffd9;
+        font-style: normal;
+      }
+      .hero p {
+        color: #cbd5e1;
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 540px;
+        margin: 0 auto;
+      }
+      .cta {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.85rem 1.75rem;
+        background: #98ffd9;
+        color: #051424;
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-decoration: none;
+        border-radius: 999px;
+        box-shadow: 0 0 24px rgba(152, 255, 217, 0.25);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .cta:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 0 32px rgba(152, 255, 217, 0.4);
+      }
+      .cta-note {
+        display: block;
+        margin-top: 0.75rem;
+        font-size: 0.8rem;
+        color: #64748b;
+      }
+      .features {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      @media (min-width: 720px) {
+        .features {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .feature-card {
+        background: #1e1e1e;
+        border: 1px solid #2a2a2a;
+        border-radius: 16px;
+        padding: 1.5rem;
+      }
+      .feature-card h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #f8fafc;
+        margin-bottom: 0.5rem;
+      }
+      .feature-card p {
+        color: #cbd5e1;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+      .feature-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        display: block;
+      }
+      .disclaimer {
+        margin-top: 3rem;
+        padding: 1.25rem;
+        background: #1e1e1e;
+        border: 1px solid #2a2a2a;
+        border-left: 3px solid #98ffd9;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        line-height: 1.6;
+        color: #cbd5e1;
+      }
+      .disclaimer strong {
+        color: #f8fafc;
+      }
+      .contact {
+        margin-top: 2.5rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #94a3b8;
+      }
+      footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.8rem;
+        color: #475569;
+        border-top: 1px solid #1e1e1e;
+      }
+      footer .made {
+        margin-top: 0.4rem;
+        color: #64748b;
+      }
+      a {
+        color: #98ffd9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Eunomia<span>.</span></h1>
+      <p>A private space for clearer thinking</p>
+    </div>
+    <nav class="nav">
+      <a href="/eunomia/" class="active">App</a>
+      <a href="/eunomia/privacy.html">Privacy Policy</a>
+      <a href="/eunomia/terms.html">Terms of Service</a>
+    </nav>
+    <div class="content">
+      <section class="hero">
+        <h2>Speak when you&rsquo;re stuck.<br /><em>Eunomia organizes the rest.</em></h2>
+        <p>
+          A digital sanctuary for personal reflection. Eunomia turns the things
+          you&rsquo;re thinking about into a structured 7-step journal entry &mdash;
+          on your iPhone, with privacy as a foundational design decision.
+        </p>
+        <a href="#" class="cta">Coming soon to App Store</a>
+        <span class="cta-note">Launching 2026 &middot; iPhone &middot; iOS 17+</span>
+      </section>
+
+      <div class="features">
+        <div class="feature-card">
+          <span class="feature-icon">&#127908;</span>
+          <h3>Voice journaling</h3>
+          <p>
+            Speak when you&rsquo;re stuck. Eunomia organizes your thoughts using
+            a structured 7-step reflection method.
+          </p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">&#128274;</span>
+          <h3>Private by design</h3>
+          <p>
+            Audio and transcripts stay on your iPhone. Apple Intelligence
+            on-device. AI processing is opt-in.
+          </p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">&#128200;</span>
+          <h3>Recurring patterns</h3>
+          <p>
+            See which thoughts come back, and your best reframes for each &mdash;
+            built from your own journaling history.
+          </p>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>A note on what Eunomia is.</strong> Eunomia is a personal
+        reflection tool, not a substitute for professional mental health care.
+        It does not diagnose, treat, or cure any condition. If you are in
+        crisis, please contact a qualified professional or local emergency
+        services: EU 112 &middot; PL 116 123 &middot; US 988 &middot; UK 116 123 &middot;
+        CH 143.
+      </div>
+
+      <p class="contact">
+        Contact:
+        <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>
+      </p>
+    </div>
+    <footer>
+      &copy; 2026 Studio Volt &middot; <a href="/">studiovolt.dev</a>
+      <div class="made">Made in Switzerland &#127464;&#127469; by Joanna Bednarczyk</div>
+    </footer>
+  </body>
+</html>
