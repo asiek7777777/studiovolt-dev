@@ -150,8 +150,8 @@
     </nav>
     <div class="content">
       <h2>Privacy Policy &mdash; Eunomia</h2>
-      <p class="version">Version 1.4</p>
-      <p class="date">Last updated: 2026-05-24</p>
+      <p class="version">Version 1.5</p>
+      <p class="date">Last updated: 2026-05-25</p>
 
       <h3>Overview</h3>
       <p>
@@ -365,33 +365,54 @@
         for details.
       </p>
 
-      <h3>Third parties</h3>
-      <p>The app relies on as few third parties as possible. The full list:</p>
+      <h3>Third parties (sub-processors)</h3>
+      <p>
+        The app relies on as few third parties as possible. Each is bound by a
+        written Data Processing Addendum (DPA) restricting use of any personal
+        data to the disclosed purpose. The full list with legal entity names and
+        processing locations:
+      </p>
       <ul>
         <li>
-          <strong>Apple</strong> &mdash; App Store distribution, in-app
-          purchases, on-device speech recognition, on-device Apple Intelligence
-          (where available). Subject to Apple&rsquo;s privacy policy. Processor
-          relationship governed by Schedule 2 of the Apple Developer Program
-          License Agreement.
+          <strong>Apple Inc.</strong> (One Apple Park Way, Cupertino, CA, USA)
+          and <strong>Apple Distribution International Ltd.</strong> (Hollyhill,
+          Cork, Ireland) &mdash; App Store distribution, in-app purchases,
+          on-device speech recognition (<code>SFSpeechRecognizer</code>),
+          on-device Apple Intelligence (where available). Subject to
+          Apple&rsquo;s privacy policy. Processor relationship governed by
+          Schedule 2 of the Apple Developer Program License Agreement.
         </li>
         <li>
-          <strong>OpenAI</strong> (only if you opt in to Cloud AI) &mdash;
-          processes the text of the reflection you submit for AI parsing under
-          a signed Data Processing Addendum. Under OpenAI&rsquo;s pay-as-you-go
-          API terms, your inputs are not used to train their models, and they
-          retain data for up to 30 days for abuse monitoring before deletion.
+          <strong>OpenAI Ireland Limited</strong> (1st Floor, The Liffey Trust
+          Centre, 117&ndash;126 Sheriff Street Upper, Dublin 1, D01 YC43,
+          Ireland) &mdash; primary controller-side counterparty under signed DPA
+          dated 2026-05-25, executed via Ironclad.
+          <strong>OpenAI, L.L.C.</strong> (3180 18th Street, San Francisco, CA
+          94110, USA) &mdash; sub-processor responsible for actual model
+          serving. Both entities certified under the EU-US Data Privacy
+          Framework and the Swiss-US Data Privacy Framework. Cloud AI inputs are
+          processed under OpenAI&rsquo;s pay-as-you-go API terms: your inputs
+          are not used to train OpenAI&rsquo;s models, and they retain data for
+          up to 30 days for abuse monitoring before deletion. Active only when
+          you opt in to Cloud AI.
         </li>
         <li>
-          <strong>Cloudflare</strong> &mdash; hosts the Worker proxy that routes
-          Cloud AI requests under a signed Data Processing Addendum. Cloudflare
-          keeps standard access logs (timestamp, URL, status, IP) but does not
-          see the content of forwarded requests.
+          <strong>Cloudflare, Inc.</strong> (101 Townsend Street, San Francisco,
+          CA 94107, USA) &mdash; operates the Worker proxy infrastructure that
+          routes Cloud AI requests. DPA auto-incorporated via Cloudflare&rsquo;s
+          Self-Serve Subscription Agreement (Cloudflare Customer DPA v6.3, dated
+          June 20, 2025). Cloudflare keeps standard access logs (timestamp, URL,
+          status, IP) but does not see the content of forwarded requests beyond
+          ephemeral transit. Cloudflare, Inc. is certified under the EU-US Data
+          Privacy Framework, the UK Extension to the EU-US DPF, and the Swiss-US
+          Data Privacy Framework.
         </li>
         <li>
-          <strong>RevenueCat</strong> &mdash; manages subscription receipts and
+          <strong>RevenueCat, Inc.</strong> (3527 Mt Diablo Blvd, Suite 250,
+          Lafayette, CA 94549, USA) &mdash; manages subscription receipts and
           entitlements. Receives only an anonymized user identifier and the
-          subscription tier; no reflection content, no name, no email.
+          subscription tier; no reflection content, no name, no email. Subject
+          to RevenueCat&rsquo;s standard DPA.
         </li>
       </ul>
       <p>
@@ -399,19 +420,52 @@
         marketing.
       </p>
 
-      <h4>International transfers</h4>
+      <h4>International transfers (GDPR Chapter V, Swiss revFADP Art. 16&ndash;19)</h4>
       <p>
-        OpenAI (USA), Cloudflare (USA), and RevenueCat (USA) process data on
-        servers located in the United States. Transfers from the EEA, UK, and
-        Switzerland are made under (a) the <strong>EU-US Data Privacy
-        Framework</strong> where the recipient is certified, and (b) the
-        European Commission&rsquo;s <strong>Standard Contractual Clauses
-        (Decision 2021/914)</strong> supplemented by technical and
-        organisational measures, where DPF certification is not available. For
-        Switzerland, the <strong>Swiss-US Data Privacy Framework</strong> applies
-        in parallel, or Swiss-recognised SCCs as supplemented by the FDPIC.
-        Copies of the SCCs and details of the safeguards are available on
-        request to <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>.
+        Personal data is transferred to the United States to the recipients
+        listed above. Transfers from the EEA, the UK, and Switzerland rely on
+        the following legal mechanisms:
+      </p>
+      <ul>
+        <li>
+          <strong>EU-US Data Privacy Framework</strong> (Commission Implementing
+          Decision (EU) 2023/1795) &mdash; applies to OpenAI, L.L.C.,
+          Cloudflare, Inc., and RevenueCat, Inc. as DPF-certified recipients.
+        </li>
+        <li>
+          <strong>UK Extension to the EU-US DPF</strong> (UK Adequacy
+          Regulations 2023) &mdash; applies in parallel for UK data subjects to
+          the same DPF-certified recipients.
+        </li>
+        <li>
+          <strong>Swiss-US Data Privacy Framework</strong> (FDPIC recognition,
+          September 2024) &mdash; applies in parallel for Swiss data subjects to
+          the same DPF-certified recipients.
+        </li>
+        <li>
+          <strong>European Commission&rsquo;s Standard Contractual Clauses
+          (Decision 2021/914, Module 2: Controller-to-Processor)</strong>
+          &mdash; fallback safeguard for any transfer where DPF certification is
+          not available, supplemented by technical and organisational measures
+          (encryption in transit and at rest, access controls, minimum-necessary
+          data principle).
+        </li>
+      </ul>
+      <p>
+        Copies of the signed DPAs, the SCCs, and details of supplementary
+        safeguards are available on request to
+        <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>.
+      </p>
+
+      <h4>Sub-processor change notice</h4>
+      <p>
+        If a sub-processor is added, replaced, or removed in a way that
+        materially changes how your data is processed, this Privacy Policy will
+        be updated and you will be given at least <strong>30 days&rsquo;
+        notice</strong> in-app and on
+        <a href="https://studiovolt.dev/eunomia/privacy">studiovolt.dev/eunomia/privacy</a>
+        before the change takes effect, so you can withdraw consent or stop
+        using the affected feature if you object.
       </p>
 
       <h3>Data retention</h3>
