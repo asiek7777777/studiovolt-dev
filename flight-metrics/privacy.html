@@ -124,98 +124,288 @@
     </nav>
     <div class="content">
       <h2>Privacy Policy &mdash; Flight Metrics</h2>
-      <p class="date">Last updated: April 2026</p>
-      <p>This Privacy Policy explains how Flight Metrics handles your data.</p>
+      <p class="date">Last updated: 25 May 2026</p>
+      <p>
+        This Privacy Policy explains how Flight Metrics (the &ldquo;App&rdquo;)
+        handles your data, what limited technical information our third-party
+        service providers process on our behalf, and your rights under the
+        EU GDPR, the Swiss revised Federal Act on Data Protection
+        (revFADP/nFADP), and other applicable laws.
+      </p>
+      <p>
+        <strong>Data controller:</strong> Joanna Bednarczyk (independent
+        developer based in Switzerland), operating under the trade name
+        &ldquo;Studio Volt&rdquo;. Contact:
+        <a href="mailto:privacy@studiovolt.dev">privacy@studiovolt.dev</a>.
+      </p>
 
       <div class="summary">
         <h3>The Short Version</h3>
         <ul>
-          <li>All your flight data stays on your device</li>
-          <li>We do not collect personal data</li>
-          <li>There are no accounts, no logins, no tracking</li>
-          <li>We do not sell or share any data</li>
+          <li>
+            Your flight recordings (GPS routes, speed, altitude, G-force,
+            barometric pressure) stay <strong>on your device only</strong>.
+            We do not operate any servers that store flight data.
+          </li>
+          <li>
+            The App uses three third-party providers for crash reporting,
+            subscription management, and map display. They process limited
+            technical data (such as your IP address, device model, crash
+            diagnostics, and anonymous purchase identifiers) &mdash;
+            described in detail below.
+          </li>
+          <li>
+            No user accounts, no logins, no advertising, no behavioural
+            tracking, no sale of data.
+          </li>
+          <li>
+            You can delete all locally stored data at any time by removing
+            flights in the App or uninstalling the App.
+          </li>
         </ul>
       </div>
 
-      <h3>1. Your Data Stays on Your Device</h3>
+      <h3>1. Data That Stays on Your Device</h3>
       <p>
-        Flight Metrics records flight data (speed, altitude, route, G-force) using
-        your device's built-in GPS and sensors. All recorded data is stored locally
-        on your device. We do not operate any servers that receive your data.
-      </p>
-      <p>
-        There are no user accounts, no logins, and no cloud storage.
-      </p>
-
-      <h3>2. No Personal Data Collection</h3>
-      <p>
-        We do not collect, store, or process any personal information.
-        The app does not use analytics, advertising SDKs, or any form of
-        user tracking.
+        Flight Metrics records flight data (GPS location, speed, heading,
+        altitude, barometric pressure, G-force) using your device's
+        built-in sensors. All recorded data is stored locally in an
+        on-device SQLite database. We do <strong>not</strong> operate any
+        servers that receive your flight data. There are no user accounts,
+        no logins, and no cloud sync.
       </p>
 
-      <h3>3. Sensor Data</h3>
+      <h3>2. Data Processed by Third-Party Service Providers</h3>
       <p>
-        During a flight recording, the app reads data from your device's sensors:
+        The App relies on three third-party processors to function. Each
+        receives only the minimum technical data described below, under a
+        Data Processing Agreement (DPA) compliant with GDPR Art. 28. None
+        of these providers receives your GPS coordinates, flight routes,
+        name, or email address.
+      </p>
+
+      <h3>2.1 Crash &amp; Error Reports &mdash; Sentry GmbH (Germany, EU)</h3>
+      <p>
+        When the App crashes or encounters an error, the following is sent
+        to Sentry's EU-hosted infrastructure:
       </p>
       <ul>
-        <li>GPS (location, speed, heading, altitude)</li>
-        <li>Barometer (atmospheric pressure)</li>
-        <li>Accelerometer (G-force)</li>
+        <li>Stack trace and error message</li>
+        <li>Device model, iOS/Android version, App version</li>
+        <li>Anonymous Sentry install identifier (UUID per install)</li>
+        <li>Your IP address (logged by Sentry's servers &mdash; retained up to 90 days)</li>
+        <li>Anonymous diagnostic breadcrumbs (e.g. which screen was open)</li>
       </ul>
       <p>
-        This data is used solely to display your flight metrics and is stored
-        only on your device.
+        <strong>Purpose:</strong> detect and fix bugs.<br />
+        <strong>Legal basis:</strong> legitimate interest (GDPR Art. 6(1)(f)).<br />
+        <strong>Data location:</strong> EU (Sentry GmbH, Germany &mdash;
+        <code>de.sentry.io</code>).<br />
+        <strong>Provider:</strong> Sentry GmbH &mdash;
+        <a href="https://sentry.io/legal/dpa/">DPA</a> &middot;
+        <a href="https://sentry.io/privacy/">Privacy Policy</a>
       </p>
 
-      <h3>4. Third-Party Services</h3>
+      <h3>2.2 Subscription Management &mdash; RevenueCat, Inc. (USA)</h3>
       <p>
-        The app uses third-party services for map display and subscription
-        management. These services may process minimal, anonymous technical
-        data (such as map tile requests or purchase receipts) according to
-        their own privacy policies. No personal data or flight recordings
-        are shared with these services.
-      </p>
-      <p>
-        Subscription purchases are processed by Apple. We do not receive
-        your payment details.
-      </p>
-
-      <h3>5. Data Retention</h3>
-      <p>
-        Your flight recordings and app settings remain on your device until
-        you delete them in the app or uninstall the app. We do not retain
-        any data on our servers.
-      </p>
-
-      <h3>6. Your Rights</h3>
-      <p>
-        Under Swiss data protection law (nDSG/FADP), EU GDPR, and other
-        applicable laws:
+        When you purchase, restore, or query a subscription, the following
+        is sent to RevenueCat:
       </p>
       <ul>
-        <li>You can view all your recorded data in the app</li>
-        <li>You can delete individual flights or all data at any time</li>
-        <li>Uninstalling the app removes all locally stored data</li>
+        <li>
+          Anonymous App User ID (UUID per install &mdash; we never link it
+          to your real identity)
+        </li>
+        <li>Apple App Store receipt for the purchase</li>
+        <li>Device model, iOS/Android version, App version</li>
+        <li>Your IP address</li>
+        <li>Subscription/entitlement state, purchase and restore events</li>
       </ul>
+      <p>
+        <strong>Purpose:</strong> validate subscriptions, prevent fraud,
+        enable &ldquo;Restore Purchases&rdquo; across reinstalls.<br />
+        <strong>Legal basis:</strong> performance of a contract
+        (GDPR Art. 6(1)(b)).<br />
+        <strong>Data location:</strong> USA. International transfer relies
+        on the <strong>EU-US Data Privacy Framework</strong> (RevenueCat
+        is certified) and Standard Contractual Clauses.<br />
+        <strong>Provider:</strong> RevenueCat, Inc. &mdash;
+        <a href="https://www.revenuecat.com/dpa">DPA</a> &middot;
+        <a href="https://www.revenuecat.com/privacy">Privacy Policy</a>
+      </p>
+
+      <h3>2.3 Map Tiles &mdash; Mapbox, Inc. (USA)</h3>
+      <p>
+        When you view the map screen, your device requests map tiles from
+        Mapbox. Each request transmits:
+      </p>
+      <ul>
+        <li>
+          Your IP address (used by Mapbox to deliver tiles and prevent abuse)
+        </li>
+        <li>Device model, OS version, App version</li>
+        <li>
+          Anonymous Mapbox SDK telemetry (e.g. tile load performance) &mdash;
+          you can disable this in
+          <em>Settings &rarr; About &rarr; Mapbox Telemetry</em>
+        </li>
+      </ul>
+      <p>
+        <strong>Purpose:</strong> display maps for visualising flight routes.<br />
+        <strong>Legal basis:</strong> legitimate interest (GDPR Art. 6(1)(f)).<br />
+        <strong>Data location:</strong> USA. Transfer under the
+        <strong>EU-US Data Privacy Framework</strong> (Mapbox is certified)
+        and Standard Contractual Clauses.<br />
+        <strong>Provider:</strong> Mapbox, Inc. &mdash;
+        <a href="https://www.mapbox.com/legal/dpa">DPA</a> &middot;
+        <a href="https://www.mapbox.com/legal/privacy">Privacy Policy</a>
+        &middot;
+        <a href="https://www.mapbox.com/telemetry">Telemetry</a>
+      </p>
+
+      <h3>2.4 Payment Processing &mdash; Apple Inc.</h3>
+      <p>
+        All subscription purchases are processed by Apple via the App Store.
+        We never receive your credit card number, billing address, or full
+        Apple ID. Apple's handling of payment data is governed by
+        <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.
+      </p>
+
+      <h3>3. What We Do <em>Not</em> Do</h3>
+      <ul>
+        <li>We do not use advertising SDKs.</li>
+        <li>
+          We do not use behavioural analytics or marketing trackers (no
+          Google Analytics, no Facebook Pixel, no AppsFlyer, no Adjust,
+          no Amplitude, no Mixpanel).
+        </li>
+        <li>We do not sell, rent, or share your data with data brokers.</li>
+        <li>
+          We do not track you across other apps or websites (no IDFA/ATT
+          tracking).
+        </li>
+        <li>
+          We do not link the anonymous identifiers used by Sentry, RevenueCat,
+          or Mapbox to your real-world identity.
+        </li>
+      </ul>
+
+      <h3>4. Data Retention</h3>
+      <ul>
+        <li>
+          <strong>Flight recordings &amp; App settings:</strong> stored on
+          your device until you delete them in the App or uninstall it.
+        </li>
+        <li>
+          <strong>Sentry crash data:</strong> up to 90 days (Sentry default
+          retention).
+        </li>
+        <li>
+          <strong>RevenueCat subscription data:</strong> for the lifetime of
+          the subscription plus the period required by tax and accounting law.
+        </li>
+        <li>
+          <strong>Mapbox tile request logs:</strong> controlled by Mapbox
+          under their privacy policy.
+        </li>
+      </ul>
+
+      <h3>5. Your Rights (GDPR / revFADP)</h3>
+      <p>You have the right to:</p>
+      <ul>
+        <li>
+          <strong>Access</strong> the personal data we (or our processors)
+          hold about you
+        </li>
+        <li><strong>Rectification</strong> of inaccurate data</li>
+        <li><strong>Erasure</strong> (&ldquo;right to be forgotten&rdquo;)</li>
+        <li><strong>Restriction</strong> of processing</li>
+        <li>
+          <strong>Object</strong> to processing based on legitimate interest
+        </li>
+        <li><strong>Data portability</strong></li>
+        <li>
+          <strong>Withdraw consent</strong> at any time (where based on consent)
+        </li>
+        <li>
+          <strong>Lodge a complaint</strong> with your supervisory authority:
+          Switzerland &mdash;
+          <a href="https://www.edoeb.admin.ch">FDPIC</a>; Poland &mdash;
+          <a href="https://www.uodo.gov.pl">UODO</a>; Germany &mdash;
+          <a href="https://www.bfdi.bund.de">BfDI</a>; France &mdash;
+          <a href="https://www.cnil.fr">CNIL</a>; other EU/EEA &mdash;
+          <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en"
+            >your national DPA</a
+          >.
+        </li>
+      </ul>
+      <p>
+        To exercise any right, email
+        <a href="mailto:privacy@studiovolt.dev">privacy@studiovolt.dev</a>.
+        We will respond within 30 days. Because flight recordings live only
+        on your device, the most effective way to delete them is to remove
+        them in the App or uninstall the App.
+      </p>
+
+      <h3>6. International Data Transfers</h3>
+      <p>
+        When using RevenueCat or Mapbox, your data is transferred to the
+        United States. These transfers are protected by the
+        <strong>EU-US Data Privacy Framework</strong> (both providers are
+        self-certified under DPF) and the European Commission's
+        <strong>Standard Contractual Clauses</strong> as a fallback.
+        Sentry data is processed in the EU (Germany) and does not leave
+        the EU/EEA.
+      </p>
 
       <h3>7. Children</h3>
       <p>
         Flight Metrics is not directed at children under 16. We do not
-        knowingly collect data from children.
+        knowingly collect data from children. If you believe a child has
+        used the App, contact
+        <a href="mailto:privacy@studiovolt.dev">privacy@studiovolt.dev</a>.
       </p>
 
-      <h3>8. Changes</h3>
+      <h3>8. Security</h3>
       <p>
-        We may update this policy from time to time. The "Last updated" date
-        will reflect any changes.
+        Flight data is stored locally on your device, protected by your
+        operating system's security (encrypted at rest on iOS).
+        Communications with Sentry, RevenueCat, Mapbox, and Apple are
+        encrypted in transit using TLS.
       </p>
 
-      <h3>9. Contact</h3>
+      <h3>9. Sub-processors</h3>
       <p>
-        Email: <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a
+        Each of our three processors engages sub-processors (cloud hosting,
+        CDN, customer support). Current lists:
+        <a href="https://sentry.io/legal/subprocessors/">Sentry</a>
+        &middot;
+        <a href="https://www.revenuecat.com/subprocessors">RevenueCat</a>
+        &middot;
+        <a href="https://www.mapbox.com/legal/subprocessors">Mapbox</a>.
+      </p>
+
+      <h3>10. Changes</h3>
+      <p>
+        We may update this Privacy Policy to reflect changes in our
+        processors, applicable law, or App functionality. The
+        &ldquo;Last updated&rdquo; date at the top will reflect the most
+        recent revision. Material changes will be announced in the App's
+        release notes.
+      </p>
+
+      <h3>11. Contact</h3>
+      <p>
+        Email:
+        <a href="mailto:privacy@studiovolt.dev">privacy@studiovolt.dev</a>
+        &middot;
+        <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a
         ><br />
         Website: <a href="https://studiovolt.dev">studiovolt.dev</a>
+      </p>
+      <p>
+        These terms may be assigned to Studio Volt GmbH or Studio Volt SA
+        once incorporated, with full continuity of obligations toward you.
       </p>
     </div>
     <footer>&copy; 2026 Studio Volt &middot; Made in Switzerland 🇨🇭</footer>
