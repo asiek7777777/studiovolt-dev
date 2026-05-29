@@ -150,8 +150,8 @@
     </nav>
     <div class="content">
       <h2>Privacy Policy &mdash; Eunomia</h2>
-      <p class="version">Version 1.5</p>
-      <p class="date">Last updated: 2026-05-25</p>
+      <p class="version">Version 1.6</p>
+      <p class="date">Last updated: 2026-05-29</p>
 
       <h3>Overview</h3>
       <p>
@@ -383,18 +383,33 @@
           Schedule 2 of the Apple Developer Program License Agreement.
         </li>
         <li>
+          <strong>Anthropic, PBC</strong> (548 Market Street #97191, San
+          Francisco, CA 94104, USA) &mdash; <strong>primary</strong> Cloud AI
+          processor for reflection parsing, suggestion generation, and
+          definition operationalization (<code>claude-sonnet-4-6</code> and
+          <code>claude-haiku-4-5</code> models). Signed Anthropic Commercial
+          DPA dated 2026-05-29, executed via Ironclad. Certified under the
+          EU-US Data Privacy Framework, the UK Extension to the DPF, and the
+          Swiss-US Data Privacy Framework. Under Anthropic&rsquo;s API terms:
+          your inputs are <strong>not used to train Anthropic&rsquo;s
+          models</strong>, and they retain data for up to 30 days for abuse
+          monitoring before deletion. Active only when you opt in to Cloud AI.
+        </li>
+        <li>
           <strong>OpenAI Ireland Limited</strong> (1st Floor, The Liffey Trust
           Centre, 117&ndash;126 Sheriff Street Upper, Dublin 1, D01 YC43,
-          Ireland) &mdash; primary controller-side counterparty under signed DPA
-          dated 2026-05-25, executed via Ironclad.
+          Ireland) &mdash; <strong>secondary</strong> Cloud AI processor, used
+          as a fallback only if the Anthropic call fails (timeout, rate limit,
+          transient error). Signed DPA dated 2026-05-25, executed via Ironclad.
           <strong>OpenAI, L.L.C.</strong> (3180 18th Street, San Francisco, CA
           94110, USA) &mdash; sub-processor responsible for actual model
-          serving. Both entities certified under the EU-US Data Privacy
-          Framework and the Swiss-US Data Privacy Framework. Cloud AI inputs are
-          processed under OpenAI&rsquo;s pay-as-you-go API terms: your inputs
-          are not used to train OpenAI&rsquo;s models, and they retain data for
-          up to 30 days for abuse monitoring before deletion. Active only when
-          you opt in to Cloud AI.
+          serving when the OpenAI fallback path is invoked. Both entities
+          certified under the EU-US Data Privacy Framework and the Swiss-US
+          Data Privacy Framework. Cloud AI inputs are processed under
+          OpenAI&rsquo;s pay-as-you-go API terms: your inputs are not used to
+          train OpenAI&rsquo;s models, and they retain data for up to 30 days
+          for abuse monitoring before deletion. Active only when you opt in to
+          Cloud AI.
         </li>
         <li>
           <strong>Cloudflare, Inc.</strong> (101 Townsend Street, San Francisco,
@@ -430,7 +445,7 @@
         <li>
           <strong>EU-US Data Privacy Framework</strong> (Commission Implementing
           Decision (EU) 2023/1795) &mdash; applies to OpenAI, L.L.C.,
-          Cloudflare, Inc., and RevenueCat, Inc. as DPF-certified recipients.
+          Anthropic, PBC, Cloudflare, Inc., and RevenueCat, Inc. as DPF-certified recipients.
         </li>
         <li>
           <strong>UK Extension to the EU-US DPF</strong> (UK Adequacy
