@@ -95,10 +95,30 @@
         padding-left: 1.2rem;
         margin-bottom: 0;
       }
+      .controller {
+        background: #18181b;
+        border-left: 3px solid #facc15;
+        padding: 1rem 1.25rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.92rem;
+        color: #cbd5e1;
+        line-height: 1.6;
+      }
       .date {
         color: #64748b;
         font-size: 0.85rem;
         margin-bottom: 1.5rem;
+      }
+      .changelog {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #1e1e1e;
+        font-size: 0.85rem;
+        color: #94a3b8;
+      }
+      .changelog h3 {
+        color: #cbd5e1;
+        margin-bottom: 0.75rem;
       }
       footer {
         text-align: center;
@@ -124,133 +144,322 @@
     </nav>
     <div class="content">
       <h2>Privacy Policy &mdash; Awaits: Countdown Widget</h2>
-      <p class="date">Last updated: 25 May 2026</p>
-      <p>This Privacy Policy explains how Awaits: Countdown Widget handles your data.</p>
+      <p class="date">Last updated: 1 June 2026 &middot; Version 2.0</p>
+
+      <p>
+        This Privacy Policy explains how Awaits: Countdown Widget (the
+        &ldquo;App&rdquo;) handles your data.
+      </p>
+
+      <div class="controller">
+        The data controller is <strong>Joanna Bednarczyk</strong>, an
+        independent developer based in Switzerland, operating under the trade
+        name &ldquo;Studio Volt&rdquo;. Contact:
+        <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>. Joanna
+        Bednarczyk acts as the controller in her personal capacity until the
+        trade name is incorporated as Studio Volt GmbH or Studio Volt SA, at
+        which point this controller designation will be assigned to the
+        successor entity with full continuity of obligations (see &sect; 10).
+      </div>
 
       <div class="summary">
         <h3>The Short Version</h3>
         <ul>
           <li>
-            All your countdown events and settings stay on your device &mdash; we
-            have no servers
+            All your countdown events and settings stay on your device &mdash;
+            we have no servers
           </li>
           <li>There are no user accounts or logins</li>
           <li>
-            We do not use third-party analytics, crash reporting, advertising
-            SDKs, or any user tracking
+            We do not use any third-party analytics, crash reporting,
+            advertising SDKs, or user tracking
           </li>
           <li>We do not sell or share any of your data</li>
+          <li>
+            The only external transmission caused by the App is the App Store
+            purchase flow for subscriptions, which is handled by Apple
+            StoreKit &mdash; Studio Volt does not see your Apple ID, payment
+            data, or card details
+          </li>
         </ul>
       </div>
 
       <h3>1. Your Data Stays on Your Device</h3>
       <p>
-        Awaits stores all your data (countdown events, event titles, dates,
-        theme preferences, and widget configurations) locally on your device
-        in an on-device database. This data never leaves your device.
+        The App stores all your data (countdown events, event titles, dates,
+        theme preferences, custom photo backgrounds, and widget configurations)
+        locally on your device in an on-device SQLite database and in the App
+        Group container shared with the home-screen widget and lock-screen
+        widget extensions. This data never leaves your device unless you
+        explicitly choose to share it using the Share feature.
       </p>
       <p>
         There are no user accounts, no logins, and no cloud storage. We do not
         operate any servers that receive your data.
       </p>
+      <p>
+        <strong>Legal basis (GDPR Art. 6(1)(b))</strong>: performance of the
+        app you have requested. <strong>Purpose limitation (Art. 5(1)(b))</strong>:
+        your event data is processed solely to display countdowns and widgets.
+        <strong>Data minimisation (Art. 5(1)(c))</strong>: we read and store
+        only the fields you enter yourself.
+      </p>
 
       <h3>2. What the App Uses from Your Device</h3>
       <p>
-        Awaits uses only the information you provide:
+        The App uses only the information you provide:
       </p>
       <ul>
         <li>Event names and dates you enter</li>
         <li>Theme and display preferences you select</li>
         <li>Widget configurations you set up</li>
+        <li>
+          Optional photo backgrounds that you pick from your photo library
+        </li>
       </ul>
       <p>
-        The app does <strong>NOT</strong> access your location (GPS), camera,
-        microphone, contacts, photos, or any other device sensors. It only works
-        with dates and your chosen visual preferences.
+        The App does <strong>NOT</strong> access your location (GPS),
+        microphone, contacts, calendar, motion sensors, or any other device
+        sensor. Photos picked as custom backgrounds are processed locally
+        (downscaled and stored inside the App&rsquo;s sandbox); they are not
+        uploaded anywhere.
       </p>
 
       <h3>3. No Third-Party Data Processors</h3>
       <p>
-        Awaits does <strong>not</strong> use any third-party services that
-        receive your data. In particular, the app does not use:
+        The App does <strong>not</strong> use any third-party services that
+        receive your data. In particular, the App does not use:
       </p>
       <ul>
-        <li>Analytics SDKs (no Google Analytics, Mixpanel, Amplitude, etc.)</li>
-        <li>Crash reporting services (no Sentry, Crashlytics, Bugsnag)</li>
-        <li>Advertising SDKs</li>
-        <li>Push notification servers (notifications are scheduled locally on your device by iOS)</li>
-        <li>Cloud sync or backup providers</li>
+        <li>
+          Analytics SDKs (no Google Analytics, Firebase Analytics, Mixpanel,
+          Amplitude, PostHog, etc.)
+        </li>
+        <li>
+          Crash reporting services (no Sentry, Crashlytics, Bugsnag, Instabug)
+        </li>
+        <li>
+          Advertising SDKs or tracking SDKs (no AdMob, AppLovin, Adjust,
+          AppsFlyer, etc.)
+        </li>
+        <li>
+          Push notification servers (notifications are scheduled locally on
+          your device via Apple&rsquo;s
+          <code>UNUserNotificationCenter</code> API)
+        </li>
+        <li>
+          Cloud sync or backup providers (no iCloud sync, no Firebase, no
+          Supabase, no custom backend)
+        </li>
+        <li>AI providers (no OpenAI, Anthropic, Google AI, etc.)</li>
       </ul>
       <p>
         All processing of your countdown events happens entirely on your
-        device. We do not operate any servers and do not have access to
-        any of your data.
+        device. We do not operate any servers and do not have access to any of
+        your data.
       </p>
 
-      <h3>4. Data Retention</h3>
+      <h4 style="margin-top: 1rem; font-size: 0.95rem; color: #e2e8f0;">
+        3.1 Apple StoreKit (in-app purchases)
+      </h4>
+      <p>
+        If you purchase a premium subscription, the transaction is handled by
+        <strong>Apple StoreKit</strong> under Apple&rsquo;s own privacy
+        practices. Studio Volt receives only an anonymous on-device receipt
+        confirming the subscription state (active/inactive) and the product
+        identifier &mdash; Studio Volt does <strong>not</strong> receive your
+        Apple ID, name, email, billing address, or payment card details from
+        Apple. Apple&rsquo;s processing of your purchase is governed by
+        <a href="https://www.apple.com/legal/privacy/" rel="noopener"
+          >Apple&rsquo;s Privacy Policy</a
+        >
+        and is independent of this Policy.
+      </p>
+      <p>
+        The App does <strong>not</strong> use RevenueCat, Stripe, or any
+        third-party payment processor. There is no Studio Volt account, server,
+        or database recording your subscription.
+      </p>
+
+      <h3>4. Data Retention (GDPR Art. 5(1)(e))</h3>
+      <p>We apply storage-limitation by category:</p>
       <ul>
         <li>
-          <strong>Local data</strong> (events, dates, themes, widget settings):
-          Stored on your device indefinitely until you delete it within the app
-          or uninstall the app. We have no access to this data.
+          <strong>Local data</strong> (events, dates, themes, widget settings,
+          custom backgrounds): Stored on your device under your control until
+          you delete it inside the App or uninstall the App. We have no access
+          to this data, so we cannot delete it for you and we never retain
+          copies.
         </li>
-        <li>We do not retain any data about you, anywhere.</li>
+        <li>
+          <strong>Apple StoreKit purchase state</strong>: Held inside the Apple
+          ecosystem under Apple&rsquo;s retention rules; refer to Apple&rsquo;s
+          Privacy Policy. Studio Volt does not retain server-side records of
+          your purchases.
+        </li>
+        <li>
+          <strong>No other personal data is retained.</strong> The App does not
+          maintain user profiles, account records, or backend logs.
+        </li>
       </ul>
 
       <h3>5. Your Rights</h3>
       <p>
-        Under Swiss data protection law (nDSG/FADP), EU GDPR, and other
-        applicable laws:
+        Under the EU GDPR (Art. 15&ndash;22), the Swiss revised Federal Act on
+        Data Protection (revFADP/nFADP), the Polish Act on the Protection of
+        Personal Data (UODO), UK GDPR, and other applicable laws you have the
+        right to:
       </p>
       <ul>
         <li>
-          You can view all your data in the app (your events and settings)
+          <strong>Access</strong> &mdash; view all your data in the App
+          (Countdowns list and Settings)
         </li>
-        <li>You can delete any event or all data at any time</li>
-        <li>Uninstalling the app removes all locally stored data</li>
+        <li>
+          <strong>Erasure</strong> &mdash; delete any event or all data at any
+          time inside the App; uninstalling the App removes all locally stored
+          data from that device
+        </li>
+        <li>
+          <strong>Rectification</strong> &mdash; edit event names, dates,
+          categories, and themes inside the App
+        </li>
+        <li>
+          <strong>Object / restrict processing</strong> &mdash; as the App does
+          not transmit your data, there is no off-device processing to object
+          to. For your App Store purchase, contact Apple
+        </li>
+        <li>
+          <strong>Portability</strong> &mdash; export your countdowns via the
+          App&rsquo;s Backup feature (Settings &rarr; Backup &amp; Restore),
+          which produces a JSON file you can save anywhere
+        </li>
+        <li>
+          <strong>Lodge a complaint</strong> &mdash; see &sect; 11 for
+          supervisory authorities
+        </li>
       </ul>
       <p>
-        If you reside in the EU/EEA, nothing in this policy or our Terms of
-        Service affects your rights under mandatory consumer protection laws of
-        your country of residence.
+        If you reside in the EU/EEA/UK/Switzerland, nothing in this Policy or
+        our Terms of Service affects your rights under mandatory consumer
+        protection laws of your country of residence.
       </p>
 
       <h3>6. App Store Privacy</h3>
       <p>
-        In accordance with Apple's App Store privacy requirements, our
-        privacy nutrition label declares that <strong>no data is
-        collected</strong> by the app.
+        In accordance with Apple&rsquo;s App Store privacy requirements, our
+        privacy nutrition label declares that
+        <strong>no data is collected</strong> by the App. Apple StoreKit
+        purchase events are handled by Apple and declared under Apple&rsquo;s
+        own App Store data-handling.
       </p>
 
       <h3>7. Children</h3>
       <p>
-        Awaits does not knowingly collect data from children under 16. If you
-        are a parent and believe your child is using the app, contact us.
+        The App does not knowingly collect data from children under 16 (per EU
+        GDPR Art. 8, with Poland implementing the higher age of 16). If you are
+        a parent and believe your child is using the App, contact us using the
+        details below.
       </p>
 
-      <h3>8. Changes</h3>
+      <h3>8. International Transfers</h3>
       <p>
-        We may update this policy. The "Last updated" date will reflect any
-        changes.
+        Because the App does not send your data to any third party, there are
+        no international data transfers caused by the App. Apple StoreKit
+        purchase processing may involve transfers between Apple entities
+        (Apple Distribution International Ltd., Ireland and Apple Inc., USA)
+        governed by Apple&rsquo;s own DPF certification and SCCs &mdash; see
+        Apple&rsquo;s Privacy Policy.
       </p>
 
-      <h3>9. Contact</h3>
+      <h3>9. Changes</h3>
       <p>
-        Email: <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a
-        ><br />
-        Website: <a href="https://studiovolt.dev">studiovolt.dev</a>
+        We may update this Policy. The &ldquo;Last updated&rdquo; date will
+        reflect any changes. Material changes will be summarised in the
+        App&rsquo;s release notes and on <code>studiovolt.dev/awaits/</code>.
       </p>
+
+      <h3>10. Forward Assignment and Successor Entity</h3>
+      <p>
+        These rights and obligations may be transferred (together with the
+        underlying business of the App) to a successor entity &mdash; including,
+        without limitation, Studio Volt GmbH or Studio Volt SA once
+        incorporated in Switzerland &mdash; with full continuity of obligations
+        to data subjects. The successor entity will assume the role of data
+        controller. You will be notified of any such transfer through the
+        App&rsquo;s release notes and the hosted Privacy Policy page at
+        <code>studiovolt.dev/awaits/privacy.html</code>.
+      </p>
+
+      <h3>11. Contact and Supervisory Authorities</h3>
+      <ul>
+        <li>
+          Email:
+          <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>
+        </li>
+        <li>
+          Privacy contact:
+          <a href="mailto:privacy@studiovolt.dev">privacy@studiovolt.dev</a>
+        </li>
+        <li>
+          Website: <a href="https://studiovolt.dev">studiovolt.dev</a>
+        </li>
+        <li>
+          Postal: Joanna Bednarczyk, Switzerland (full address provided on
+          request to the privacy contact above)
+        </li>
+      </ul>
       <p>If you believe your rights have been violated:</p>
       <ul>
         <li>
-          Switzerland: Federal Data Protection and Information Commissioner
-          (FDPIC)
+          <strong>Switzerland</strong>: Federal Data Protection and Information
+          Commissioner (FDPIC) &mdash;
+          <a href="https://www.edoeb.admin.ch" rel="noopener"
+            >edoeb.admin.ch</a
+          >
         </li>
-        <li>EU: Your local Data Protection Authority</li>
+        <li>
+          <strong>EU/EEA</strong>: your local Data Protection Authority &mdash;
+          <a href="https://edpb.europa.eu/about-edpb/board/members_en" rel="noopener"
+            >edpb.europa.eu</a
+          >
+        </li>
+        <li>
+          <strong>Poland</strong>: Prezes Urz&#281;du Ochrony Danych Osobowych
+          (UODO) &mdash;
+          <a href="https://uodo.gov.pl" rel="noopener">uodo.gov.pl</a>
+        </li>
+        <li>
+          <strong>United Kingdom</strong>: Information Commissioner&rsquo;s
+          Office (ICO) &mdash;
+          <a href="https://ico.org.uk" rel="noopener">ico.org.uk</a>
+        </li>
       </ul>
+
+      <div class="changelog">
+        <h3>Changelog</h3>
+        <ul>
+          <li>
+            <strong>2026-06-01 &mdash; v2.0</strong> &mdash; Audit per
+            master-orchestrator weekly-privacy-review; themis remediation.
+            Added Art 13 controller block naming Joanna Bednarczyk; added
+            forward-assignment clause; added legal basis (Art 6(1)(b)) and
+            purpose-limitation / data-minimisation references; added solo-dev
+            / pre-incorporation disclosure; added Polish UODO + UK ICO
+            supervisory authorities; explicit Apple StoreKit carve-out;
+            expanded &ldquo;no third-party processors&rdquo; list (AI
+            providers, ad SDKs).
+          </li>
+          <li>
+            <strong>2026-05-25 &mdash; v1.0</strong> &mdash; Initial hosted
+            Privacy Policy.
+          </li>
+        </ul>
+      </div>
     </div>
     <footer>
-      &copy; 2026 Studio Volt &middot; <a href="/">studiovolt.dev</a>
+      &copy; 2026 Joanna Bednarczyk &middot; Studio Volt &middot;
+      <a href="/">studiovolt.dev</a> &middot; Made in Switzerland 🇨🇭
     </footer>
   </body>
 </html>
