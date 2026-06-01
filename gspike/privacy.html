@@ -124,8 +124,22 @@
     </nav>
     <div class="content">
       <h2>Privacy Policy &mdash; GSpike</h2>
-      <p class="date">Last updated: 25 May 2026</p>
-      <p>This Privacy Policy explains how GSpike handles your data.</p>
+      <p class="date">Last updated: 1 June 2026</p>
+      <p>
+        <strong>Controller:</strong> Joanna Bednarczyk (independent developer
+        based in Switzerland), operating under the trade name &ldquo;Studio
+        Volt&rdquo;.<br />
+        <strong>Contact:</strong>
+        <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>
+      </p>
+      <p>
+        This Privacy Policy explains how GSpike (the &ldquo;App&rdquo;) handles
+        your data, what limited technical information our third-party service
+        provider processes on our behalf, and your rights under the EU GDPR, the
+        Swiss revised Federal Act on Data Protection (revFADP/nFADP), the Polish
+        Act on the Protection of Personal Data (UODO), the UK GDPR, and other
+        applicable laws.
+      </p>
 
       <div class="summary">
         <h3>The Short Version</h3>
@@ -136,10 +150,13 @@
           </li>
           <li>There are no user accounts or logins</li>
           <li>
-            We collect anonymous crash reports to improve the app &mdash; nothing
-            personal
+            We use one third-party service provider (Sentry) for anonymous
+            crash diagnostics
           </li>
-          <li>We do not sell or share any of your data</li>
+          <li>
+            We do not sell or share any of your data, and there is no
+            advertising or behavioural tracking
+          </li>
         </ul>
       </div>
 
@@ -154,12 +171,12 @@
       </p>
       <p>
         There are no user accounts, no logins, and no cloud storage. We do not
-        operate any servers that receive your data.
+        operate any servers that receive your session data.
       </p>
 
       <h3>2. What the App Uses from Your Device</h3>
       <p>
-        During measurement sessions, the app reads data from your device's
+        During measurement sessions, the App reads data from your device's
         built-in sensors:
       </p>
       <ul>
@@ -170,42 +187,71 @@
       </ul>
       <p>
         This sensor data is used only to calculate and display G-force metrics
-        and is stored only on your device.
+        and is stored only on your device. Accelerometer readings are never
+        transmitted off-device by the App.
       </p>
 
-      <h3>3. Crash Reports (Sentry)</h3>
+      <h3>3. Crash &amp; Error Reports &mdash; Sentry GmbH (Germany, EU)</h3>
       <p>
-        To improve the app and fix bugs, we use
+        To detect and fix bugs, the App uses
         <a href="https://sentry.io" rel="noopener" target="_blank">Sentry</a>
-        for anonymous crash reporting. When the app crashes, the following
-        technical data is sent:
+        for anonymous crash reporting. When the App crashes or encounters an
+        unhandled error, the following technical information is sent to Sentry's
+        infrastructure:
       </p>
       <ul>
-        <li>Device model and OS version</li>
-        <li>App version</li>
-        <li>Error details (stack trace)</li>
+        <li>Stack trace and error message</li>
+        <li>Device model, iOS version, App version</li>
+        <li>
+          Anonymous Sentry install identifier (auto-generated UUID per install)
+        </li>
+        <li>
+          Anonymous diagnostic breadcrumbs (e.g. which screen was open when the
+          error occurred)
+        </li>
       </ul>
       <p>
-        Crash reports do <strong>NOT</strong> include your G-force data, session
-        history, personal records, IP address, or any other personal information.
-        Our Sentry configuration explicitly disables collection of any personally
-        identifiable information.
+        Your IP address is visible to Sentry's servers as part of the network
+        connection that delivers a crash event (this is true of any internet
+        request). Our Sentry configuration is set so that the IP address is
+        <strong>not</strong> stored inside the crash event payload itself.
+        Sentry retains incoming connection metadata under its own server-log
+        practices for up to 30 days.
       </p>
       <p>
-        We collect crash data solely to make the app better. We do not sell this
-        data.
+        Crash reports do <strong>not</strong> include your G-force readings,
+        session history, personal records, name, email address, or any account
+        identifier (because there are no accounts). The App is configured to
+        minimise the collection of personally identifiable information by
+        Sentry.
       </p>
       <p>
-        Sentry (Sentry, Inc., USA) acts as a data processor under a
-        Data Processing Addendum (DPA) and provides data protection equivalent
-        to or exceeding the protections described in this Privacy Policy. Crash
-        report data may be processed on servers located in the United States.
-        Sentry processes data under Standard Contractual Clauses (SCCs) approved
-        by the European Commission, ensuring GDPR-equivalent protections. For
-        details, see
+        <strong>Purpose:</strong> detect and fix bugs.<br />
+        <strong>Legal basis (GDPR Art. 6(1)(f)):</strong> legitimate interest in
+        ensuring App stability and security. You may object to this processing
+        at any time (see &ldquo;Your Rights&rdquo; below).<br />
+        <strong>Data location:</strong> EU and US (Sentry GmbH, Germany operates
+        EU-region infrastructure; Sentry, Inc. operates US-region
+        infrastructure for its parent service).<br />
+        <strong>International transfers:</strong> Sentry is certified under the
+        EU-US Data Privacy Framework (participant ID 5869 &mdash; verified
+        2026-06-01) and Sentry's DPA also incorporates the European
+        Commission's Standard Contractual Clauses (SCCs) for any transfers
+        outside the DPF scope, including UK Addendum and Swiss Addendum.<br />
+        <strong>Provider:</strong> Sentry GmbH (acting jointly with Sentry,
+        Inc.) &mdash; DPA:
+        <a href="https://sentry.io/legal/dpa/" rel="noopener" target="_blank"
+          >sentry.io/legal/dpa</a
+        >
+        &middot; Privacy:
         <a href="https://sentry.io/privacy/" rel="noopener" target="_blank"
-          >Sentry's Privacy Policy</a
+          >sentry.io/privacy</a
         >.
+      </p>
+      <p>
+        We do not sell crash report data, do not use it for advertising, and do
+        not enable Sentry's AI / Seer / Autofix features for the Studio Volt
+        organisation.
       </p>
 
       <h3>4. Data Retention</h3>
@@ -213,7 +259,7 @@
         <li>
           <strong>Local data</strong> (G-force sessions, peak/average records,
           settings): Stored on your device indefinitely until you delete it
-          within the app or uninstall the app. We have no access to this data.
+          within the App or uninstall the App. We have no access to this data.
         </li>
         <li>
           <strong>Watch data</strong>: Session data synced between iPhone and
@@ -221,40 +267,57 @@
           one device removes it from both.
         </li>
         <li>
-          <strong>Crash reports</strong> (Sentry): Retained for up to 30 days
-          (Sentry Developer plan retention), then automatically deleted.
+          <strong>Crash reports</strong> (Sentry): Up to 30 days (Sentry
+          Developer plan retention), then automatically deleted by Sentry.
+        </li>
+        <li>
+          <strong>Sentry server connection logs</strong> (IP): Up to 30 days
+          under Sentry's own log retention policy.
         </li>
         <li>We do not retain any other data about you.</li>
       </ul>
 
       <h3>5. Sharing</h3>
       <p>
-        When you use the "Share" feature, you create an image (share card) that
-        you can share via your phone's standard sharing options. This is entirely
-        your choice and under your control.
+        When you use the &ldquo;Share&rdquo; feature, you create an image
+        (share card) that you can share via your phone's standard sharing
+        options. This is entirely your choice and under your control. We are
+        not involved in the onward sharing.
       </p>
 
       <h3>6. Your Rights</h3>
       <p>
-        Under Swiss data protection law (nDSG/FADP), EU GDPR, and other
-        applicable laws:
+        Under the EU GDPR, the Swiss revFADP/nFADP, the Polish UODO, the UK
+        GDPR, and other applicable laws, you have the following rights:
       </p>
       <ul>
         <li>
-          You can view all your data in the app (History tab)
-        </li>
-        <li>You can delete any session or all data at any time</li>
-        <li>
-          Uninstalling the app removes all locally stored data from that device
+          <strong>Access</strong> &mdash; view all your data in the App (History
+          tab).
         </li>
         <li>
-          You can request deletion of crash report data by emailing us (see
-          below). We will process your request within 30 days.
+          <strong>Erasure</strong> &mdash; delete any session or all data at any
+          time within the App; uninstalling the App removes all locally stored
+          data from that device.
         </li>
         <li>
-          You can revoke consent for crash reporting by contacting us at the
-          email below. We will provide instructions to disable crash reporting on
-          your device.
+          <strong>Crash report deletion</strong> &mdash; request deletion of
+          Sentry crash report data by emailing us (see below). We will process
+          your request within 30 days.
+        </li>
+        <li>
+          <strong>Object</strong> &mdash; object to crash reporting at any time
+          by contacting us; we will provide instructions to disable crash
+          reporting on your device or remove the relevant install identifier
+          from Sentry.
+        </li>
+        <li>
+          <strong>Portability</strong> &mdash; your local session data is yours;
+          you can export it via the App's share feature.
+        </li>
+        <li>
+          <strong>Lodge a complaint</strong> &mdash; see &ldquo;Contact&rdquo;
+          below for supervisory authorities.
         </li>
       </ul>
       <p>
@@ -263,46 +326,92 @@
         your country of residence.
       </p>
 
-      <h3>7. App Store Privacy</h3>
-      <p>In accordance with Apple's App Store privacy requirements:</p>
+      <h3>7. Apple App Privacy Categories</h3>
+      <p>
+        In accordance with Apple's App Store privacy requirements, the App
+        declares the following data categories as collected:
+      </p>
       <ul>
         <li>
-          <strong>Motion &amp; fitness data</strong>: Used for app functionality
-          only &mdash; not linked to your identity
+          <strong>Diagnostics</strong> (Crash Data, Performance Data, Other
+          Diagnostic Data) &mdash; used for App functionality only,
+          <strong>not</strong> linked to your identity, <strong>not</strong>
+          used to track you.
         </li>
         <li>
-          <strong>Diagnostics</strong> (crash data): Used for app functionality
-          only &mdash; not linked to your identity
+          <strong>Identifiers</strong> (anonymous Sentry install ID) &mdash;
+          used for App functionality only, <strong>not</strong> linked to your
+          identity, <strong>not</strong> used to track you.
         </li>
-        <li>No other data types are collected</li>
       </ul>
+      <p>
+        The App does <strong>not</strong> collect Location, Contacts, Health
+        &amp; Fitness, User Content, Purchases, Search History, Browsing
+        History, Financial Info, Sensitive Info, or Usage Data.
+      </p>
+      <p>
+        Accelerometer / motion sensor readings are read on-device for the App's
+        core function (G-force measurement) and are never transmitted
+        off-device &mdash; they are therefore not declared as &ldquo;collected
+        data&rdquo; under Apple's App Privacy framework.
+      </p>
 
       <h3>8. Children</h3>
       <p>
-        GSpike does not knowingly collect data from children under 16. If you are
-        a parent and believe your child is using the app, contact us.
+        GSpike does not knowingly collect data from children under 16. If you
+        are a parent and believe your child is using the App, please contact
+        us.
       </p>
 
-      <h3>9. Changes</h3>
+      <h3>9. Changes to This Policy</h3>
       <p>
-        We may update this policy. The "Last updated" date will reflect any
-        changes.
+        We may update this policy from time to time. The &ldquo;Last
+        updated&rdquo; date at the top will reflect any changes. Material
+        changes will be highlighted in the App and/or on
+        <a href="/gspike/">studiovolt.dev/gspike/</a>.
       </p>
 
-      <h3>10. Contact</h3>
+      <h3>10. Contact and Supervisory Authorities</h3>
+      <p>
+        For any privacy enquiry, data-subject request, or to exercise your
+        rights:
+      </p>
       <p>
         Email:
         <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a
         ><br />
         Website: <a href="https://studiovolt.dev">studiovolt.dev</a>
       </p>
-      <p>If you believe your rights have been violated:</p>
+      <p>If you believe your rights have been violated, you may lodge a complaint with:</p>
       <ul>
         <li>
-          Switzerland: Federal Data Protection and Information Commissioner
-          (FDPIC)
+          <strong>Switzerland:</strong> Federal Data Protection and Information
+          Commissioner (FDPIC) &mdash;
+          <a href="https://www.edoeb.admin.ch" rel="noopener" target="_blank"
+            >edoeb.admin.ch</a
+          >
         </li>
-        <li>EU: Your local Data Protection Authority</li>
+        <li>
+          <strong>EU:</strong> your local Data Protection Authority
+        </li>
+        <li>
+          <strong>Poland:</strong> Prezes Urzędu Ochrony Danych Osobowych
+          (UODO) &mdash;
+          <a href="https://uodo.gov.pl" rel="noopener" target="_blank"
+            >uodo.gov.pl</a
+          >
+        </li>
+        <li>
+          <strong>Germany:</strong> the competent
+          Landesdatenschutzbeauftragte for your federal state
+        </li>
+        <li>
+          <strong>United Kingdom:</strong> Information Commissioner's Office
+          (ICO) &mdash;
+          <a href="https://ico.org.uk" rel="noopener" target="_blank"
+            >ico.org.uk</a
+          >
+        </li>
       </ul>
     </div>
     <footer>
