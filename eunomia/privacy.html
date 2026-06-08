@@ -205,21 +205,6 @@
         incorporation, with full continuity of obligations.
       </p>
 
-      <h3>EU representative (GDPR Art. 27)</h3>
-      <p>
-        As a Switzerland-based developer offering Eunomia to users in the
-        European Economic Area, an EU representative is appointed under
-        Article 27 GDPR. EU/EEA residents may contact the representative
-        for any GDPR-related matter at the address provided on
-        <a href="https://studiovolt.dev/privacy/eu-rep">studiovolt.dev/privacy/eu-rep</a>
-        or by emailing <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>
-        with the subject line &ldquo;EU Representative&rdquo;.
-      </p>
-      <p>
-        For UK residents, a UK Representative is similarly appointed
-        under UK GDPR Article 27. Contact details available on
-        <a href="https://studiovolt.dev/privacy/uk-rep">studiovolt.dev/privacy/uk-rep</a>.
-      </p>
 
       <h3>What is collected</h3>
 
@@ -326,10 +311,10 @@
         </li>
         <li>
           <strong>Cloud AI (opt-in only)</strong>: the text of the current
-          reflection is sent through a Cloudflare Worker proxy to OpenAI&rsquo;s
-          <code>gpt-4o-mini</code> model. You will see a clear consent screen
-          the first time you enable this option, with the words &ldquo;your
-          transcript leaves your device&rdquo;.
+          reflection is sent through a proxy to a Cloud AI provider for
+          parsing. You will see a clear consent screen the first time you
+          enable this option, with the words &ldquo;your transcript leaves your
+          device&rdquo;.
         </li>
       </ol>
       <p>
@@ -338,20 +323,6 @@
       </p>
 
       <h3>Speech recognition</h3>
-
-      <h4>Illinois residents — BIPA notice</h4>
-      <p>
-        For users in Illinois: Eunomia does <strong>not</strong> collect,
-        capture, store, or use voiceprints, scans of face geometry, or any
-        biometric identifier or biometric information as defined by the
-        Illinois Biometric Information Privacy Act (740 ILCS 14/10).
-        Speech-to-text transcription uses Apple&rsquo;s on-device
-        <code>SFSpeechRecognizer</code>; the resulting text is not a
-        voiceprint and is not used for identification. Audio recordings
-        remain on your device unless you manually share them via the iOS
-        Share sheet. No biometric data is sold, leased, traded, or
-        otherwise disclosed.
-      </p>
 
       <h4>Speech engine — additional notes</h4>
       <p>
@@ -365,69 +336,35 @@
         for details.
       </p>
 
-      <h3>Third parties (sub-processors)</h3>
+      <h3>Sub-processors</h3>
       <p>
-        The app relies on as few third parties as possible. Each is bound by a
-        written Data Processing Addendum (DPA) restricting use of any personal
-        data to the disclosed purpose. The full list with legal entity names and
-        processing locations:
+        The app relies on as few third parties as possible. Each is bound by
+        a written Data Processing Addendum restricting use of any personal
+        data to the disclosed purpose.
       </p>
       <ul>
         <li>
-          <strong>Apple Inc.</strong> (One Apple Park Way, Cupertino, CA, USA)
-          and <strong>Apple Distribution International Ltd.</strong> (Hollyhill,
-          Cork, Ireland) &mdash; App Store distribution, in-app purchases,
-          on-device speech recognition (<code>SFSpeechRecognizer</code>),
-          on-device Apple Intelligence (where available). Subject to
-          Apple&rsquo;s privacy policy. Processor relationship governed by
-          Schedule 2 of the Apple Developer Program License Agreement.
+          <strong>Apple</strong> &mdash; App Store distribution, in-app
+          purchases, on-device speech recognition, on-device Apple
+          Intelligence (where available). See Apple&rsquo;s Privacy Policy.
         </li>
         <li>
-          <strong>Anthropic, PBC</strong> (548 Market Street #97191, San
-          Francisco, CA 94104, USA) &mdash; <strong>primary</strong> Cloud AI
-          processor for reflection parsing, suggestion generation, and
-          definition operationalization (<code>claude-sonnet-4-6</code> and
-          <code>claude-haiku-4-5</code> models). Signed Anthropic Commercial
-          DPA dated 2026-05-29, executed via Ironclad. Certified under the
-          EU-US Data Privacy Framework, the UK Extension to the DPF, and the
-          Swiss-US Data Privacy Framework. Under Anthropic&rsquo;s API terms:
-          your inputs are <strong>not used to train Anthropic&rsquo;s
-          models</strong>, and they retain data for up to 30 days for abuse
-          monitoring before deletion. Active only when you opt in to Cloud AI.
+          <strong>Anthropic</strong> &mdash; Cloud AI parsing, when Cloud AI
+          is enabled. Your inputs are not used to train models.
         </li>
         <li>
-          <strong>OpenAI Ireland Limited</strong> (1st Floor, The Liffey Trust
-          Centre, 117&ndash;126 Sheriff Street Upper, Dublin 1, D01 YC43,
-          Ireland) &mdash; <strong>secondary</strong> Cloud AI processor, used
-          as a fallback only if the Anthropic call fails (timeout, rate limit,
-          transient error). Signed DPA dated 2026-05-25, executed via Ironclad.
-          <strong>OpenAI, L.L.C.</strong> (3180 18th Street, San Francisco, CA
-          94110, USA) &mdash; sub-processor responsible for actual model
-          serving when the OpenAI fallback path is invoked. Both entities
-          certified under the EU-US Data Privacy Framework and the Swiss-US
-          Data Privacy Framework. Cloud AI inputs are processed under
-          OpenAI&rsquo;s pay-as-you-go API terms: your inputs are not used to
-          train OpenAI&rsquo;s models, and they retain data for up to 30 days
-          for abuse monitoring before deletion. Active only when you opt in to
-          Cloud AI.
+          <strong>OpenAI</strong> &mdash; Cloud AI fallback, when Cloud AI is
+          enabled. Your inputs are not used to train models.
         </li>
         <li>
-          <strong>Cloudflare, Inc.</strong> (101 Townsend Street, San Francisco,
-          CA 94107, USA) &mdash; operates the Worker proxy infrastructure that
-          routes Cloud AI requests. DPA auto-incorporated via Cloudflare&rsquo;s
-          Self-Serve Subscription Agreement (Cloudflare Customer DPA v6.3, dated
-          June 20, 2025). Cloudflare keeps standard access logs (timestamp, URL,
-          status, IP) but does not see the content of forwarded requests beyond
-          ephemeral transit. Cloudflare, Inc. is certified under the EU-US Data
-          Privacy Framework, the UK Extension to the EU-US DPF, and the Swiss-US
-          Data Privacy Framework.
+          <strong>Cloudflare</strong> &mdash; operates the proxy
+          infrastructure for Cloud AI requests; does not see request content
+          beyond ephemeral transit.
         </li>
         <li>
-          <strong>RevenueCat, Inc.</strong> (3527 Mt Diablo Blvd, Suite 250,
-          Lafayette, CA 94549, USA) &mdash; manages subscription receipts and
-          entitlements. Receives only an anonymized user identifier and the
-          subscription tier; no reflection content, no name, no email. Subject
-          to RevenueCat&rsquo;s standard DPA.
+          <strong>RevenueCat</strong> &mdash; manages subscription receipts
+          and entitlements. Receives only an anonymized identifier and the
+          subscription tier; no reflection content, no name, no email.
         </li>
       </ul>
       <p>
@@ -435,52 +372,26 @@
         marketing.
       </p>
 
-      <h4>International transfers (GDPR Chapter V, Swiss revFADP Art. 16&ndash;19)</h4>
+      
+
+      <h4 style="margin-top:1rem;font-size:0.95rem;color:#e2e8f0;">International transfers</h4>
       <p>
-        Personal data is transferred to the United States to the recipients
-        listed above. Transfers from the EEA, the UK, and Switzerland rely on
-        the following legal mechanisms:
-      </p>
-      <ul>
-        <li>
-          <strong>EU-US Data Privacy Framework</strong> (Commission Implementing
-          Decision (EU) 2023/1795) &mdash; applies to OpenAI, L.L.C.,
-          Anthropic, PBC, Cloudflare, Inc., and RevenueCat, Inc. as DPF-certified recipients.
-        </li>
-        <li>
-          <strong>UK Extension to the EU-US DPF</strong> (UK Adequacy
-          Regulations 2023) &mdash; applies in parallel for UK data subjects to
-          the same DPF-certified recipients.
-        </li>
-        <li>
-          <strong>Swiss-US Data Privacy Framework</strong> (FDPIC recognition,
-          September 2024) &mdash; applies in parallel for Swiss data subjects to
-          the same DPF-certified recipients.
-        </li>
-        <li>
-          <strong>European Commission&rsquo;s Standard Contractual Clauses
-          (Decision 2021/914, Module 2: Controller-to-Processor)</strong>
-          &mdash; fallback safeguard for any transfer where DPF certification is
-          not available, supplemented by technical and organisational measures
-          (encryption in transit and at rest, access controls, minimum-necessary
-          data principle).
-        </li>
-      </ul>
-      <p>
-        Copies of the signed DPAs, the SCCs, and details of supplementary
-        safeguards are available on request to
+        Personal data may be transferred to the United States to the
+        processors named above. These transfers are protected by lawful
+        safeguards including standard contractual clauses and, where
+        available, Data Privacy Framework certifications recognised by the
+        EU, UK, and Swiss authorities. Details available on request to
         <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>.
       </p>
 
-      <h4>Sub-processor change notice</h4>
+      
+
+      <h4 style="margin-top:1rem;font-size:0.95rem;color:#e2e8f0;">Sub-processor change notice</h4>
       <p>
-        If a sub-processor is added, replaced, or removed in a way that
-        materially changes how your data is processed, this Privacy Policy will
-        be updated and you will be given at least <strong>30 days&rsquo;
-        notice</strong> in-app and on
-        <a href="https://studiovolt.dev/eunomia/privacy">studiovolt.dev/eunomia/privacy</a>
-        before the change takes effect, so you can withdraw consent or stop
-        using the affected feature if you object.
+        If we add or change sub-processors in a way that materially affects
+        how your data is processed, this Privacy Policy will be updated and
+        users will be notified via the App or
+        <a href="https://studiovolt.dev/eunomia/privacy">studiovolt.dev/eunomia/privacy</a>.
       </p>
 
       <h3>Data retention</h3>
@@ -507,94 +418,38 @@
       </ul>
 
       <h3>Your rights</h3>
-
-      <h4>If you are in the EU/EEA, UK, or Switzerland (GDPR)</h4>
-      <p>You have the right to:</p>
+      <p>
+        Under applicable data protection laws (including the EU GDPR, the
+        Swiss FADP, and the UK GDPR), you have the right to:
+      </p>
       <ul>
         <li>access the data held about you,</li>
         <li>ask the developer to correct it,</li>
-        <li>ask the developer to delete it (right to erasure),</li>
+        <li>ask the developer to delete it,</li>
         <li>object to or restrict processing,</li>
         <li>request a copy in a portable format,</li>
         <li>withdraw consent for Cloud AI at any time, and</li>
         <li>
-          complain to a supervisory authority (in Switzerland: the FDPIC; in
-          your EU country, your national DPA).
+          lodge a complaint with your local Data Protection Authority (in
+          Switzerland, the FDPIC &mdash;
+          <a href="https://edoeb.admin.ch" rel="noopener" target="_blank">edoeb.admin.ch</a>).
         </li>
       </ul>
       <p>
-        <strong>Lawful basis for processing.</strong> On-device data is
-        processed based on the <strong>legitimate interest</strong> of providing
-        the app you installed. Cloud AI inputs are processed based on your
-        <strong>explicit consent</strong>. Anonymous usage counters are
-        processed on the basis of legitimate interest in operating the service
-        fairly.
+        On-device data is processed to provide the app you installed. Cloud
+        AI inputs are processed based on your explicit consent. Anonymous
+        usage counters are processed to operate the service fairly.
       </p>
       <p>
-        Because the data received is not linked to your real identity, in most
-        cases the most effective way to exercise these rights is to delete the
-        app (which removes your local data) and stop using Cloud AI (which
-        stops new server-side data). To raise a formal request, write to
+        Because the data received is not linked to your real identity, in
+        most cases the most effective way to exercise these rights is to
+        delete the app (which removes your local data) and stop using Cloud
+        AI (which stops new server-side data). To raise a formal request,
+        write to
         <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>.
       </p>
 
-      <h4>If you are in Switzerland (revFADP / nFADP, in force September 2023)</h4>
-      <p>
-        Under the revised Swiss Federal Act on Data Protection, you have the
-        right of access (Art. 25), correction (Art. 32(1)), deletion
-        (Art. 32(2)), and to object to processing. The Swiss supervisory
-        authority is the <strong>Federal Data Protection and Information
-        Commissioner (FDPIC / EDÖB)</strong> &mdash;
-        <a href="https://edoeb.admin.ch" rel="noopener" target="_blank">edoeb.admin.ch</a>.
-        Cross-border transfers of personal data to the United States (OpenAI,
-        Cloudflare, RevenueCat) are made under the Swiss-US Data Privacy
-        Framework or, where unavailable, EU Standard Contractual Clauses
-        recognised by the FDPIC, supplemented with technical and organisational
-        measures.
-      </p>
-
-      <h4>If you are in California (CCPA / CPRA)</h4>
-      <p>
-        In the prior 12 months, the categories of personal information collected
-        (only if Cloud AI is enabled) are: <strong>Identifiers</strong> (a random
-        UUID generated on your device) and <strong>Customer Content / Other
-        Information</strong> (the text of the reflection you submit for AI
-        parsing). Sources: directly from your device. Business purpose: providing
-        the AI parsing feature you requested (Cal. Civ. Code §1798.140(e)(1)).
-        Disclosed to: OpenAI, Cloudflare, and RevenueCat as service providers
-        under written contract restricting use to the disclosed purpose.
-      </p>
-      <p>
-        The developer does <strong>not</strong> and <strong>has not</strong> in
-        the prior 12 months: sold personal information, shared personal
-        information for cross-context behavioral advertising, or processed
-        sensitive personal information for purposes beyond those permitted under
-        §1798.121(a). You have the right to know, delete, correct, and limit;
-        to exercise, email <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>.
-        You will not be discriminated against for exercising these rights.
-      </p>
-
-      <h3>Children under 13 (COPPA / GDPR Art. 8)</h3>
-      <p>
-        Eunomia is <strong>not directed to children under 13</strong> and does
-        not knowingly collect personal information from children under 13 (COPPA,
-        15 U.S.C. §6501) or from children under 16 in EU Member States applying
-        the higher age (GDPR Art. 8). The App Store age rating of <strong>4+</strong>
-        reflects content classification only; the <strong>intended audience is
-        17+</strong> per the Terms of Service. If you believe a child under 13
-        has provided information, contact
-        <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a> for
-        prompt deletion.
-      </p>
-
-      <h3>Children (general)</h3>
-      <p>
-        Eunomia is intended for users <strong>aged 17 and older</strong>,
-        consistent with the Terms of Service target-audience exclusion.
-        Information from minors below that age is not knowingly collected. If
-        you believe a minor has used the app, please contact
-        <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>.
-      </p>
+      
 
       <h3>Changes to this policy</h3>
       <p>
@@ -618,30 +473,6 @@
           <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>
         </li>
         <li>Web: <a href="https://studiovolt.dev">studiovolt.dev</a></li>
-      </ul>
-
-      <hr />
-
-      <h3>Appendix: Apple App Privacy Labels mapping</h3>
-      <p>
-        This appendix is for transparency about what is declared in App Store
-        Connect. In summary:
-      </p>
-      <ul>
-        <li>
-          <strong>Default app (Cloud AI off)</strong>: no data is collected from
-          the device.
-        </li>
-        <li>
-          <strong>Cloud AI on</strong>: User Content (Other User Content) and
-          Identifiers (User ID &mdash; anonymous) are collected,
-          <strong>not linked</strong> to identity, and
-          <strong>not used for tracking</strong>.
-        </li>
-        <li>
-          <strong>Purchases</strong>: handled by Apple; not collected beyond an
-          anonymized tier flag.
-        </li>
       </ul>
     </div>
     <footer>
