@@ -85,7 +85,7 @@
     </div>
     <div class="content">
       <h2>Terms of Service — Eunomia</h2>
-      <p class="version"><strong>Version 1.6</strong></p>
+      <p class="version"><strong>Version 1.7</strong></p>
       <p class="date"><strong>Last updated: 2026-06-17</strong></p>
       <hr />
       <div class="crisis">
@@ -156,7 +156,7 @@
       </ul>
       <p>Use Eunomia as you would a private notebook. If you need support, please reach out to a qualified professional or trusted person.</p>
       <h4>AI processing — on-device vs Cloud AI (and when Cloud AI is required)</h4>
-      <p>Eunomia uses two AI paths to turn reflections into structured 7-column records:</p>
+      <p>Eunomia uses the following AI paths to turn reflections into structured 7-column records:</p>
       <p>1. <strong>Apple Intelligence (on-device)</strong> — when your iPhone supports it AND your speech language is among those Apple Intelligence supports (currently English, German, French, Italian, Spanish, Portuguese, Japanese, Korean, Chinese, Dutch, Swedish, Danish, Norwegian, Turkish, Vietnamese, and a small number of others — Apple&#x27;s list changes over time and I do not control it). On-device processing means your text does not leave your iPhone. 2. <strong>Cloud AI</strong> — your reflection text is sent through my Cloudflare Worker proxy to a third-party AI provider and the structured result returns to you. The proxy is designed not to retain the content of your reflection beyond the time needed to service the request; only an anonymous token counter is kept for billing. The third-party AI provider handles your text under <strong>its own API terms and data-processing terms</strong>, which currently provide that API inputs are not used to train its models and are retained only for a limited period (typically up to 30 days) for abuse monitoring before deletion. Those terms are set by the provider, may change, and are not within the developer&#x27;s control; the developer makes no independent warranty as to the provider&#x27;s processing. Apple-Intelligence-style on-device privacy does not apply to Cloud AI. The current provider is listed in the Privacy Policy.</p>
       <p><strong>Cloud AI is opt-in for supported languages and required for unsupported languages.</strong></p>
       <p>If your iPhone&#x27;s speech language is one Apple Intelligence does not support (Polish is the current canonical example), Apple&#x27;s on-device AI cannot parse your reflections in that language. In that case, Cloud AI is the only path that produces a meaningful Padesky structure. Eunomia will:</p>
