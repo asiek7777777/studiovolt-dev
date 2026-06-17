@@ -194,10 +194,12 @@
         <li>Error details (stack trace)</li>
       </ul>
       <p>
-        Crash reports do <strong>NOT</strong> include your GPS data, speed,
-        location, personal records, display name, IP address, or any other
-        personal information. Our Sentry configuration explicitly disables
-        collection of any personally identifiable information.
+        Crash reports do <strong>not</strong> include your GPS data, speed,
+        location, personal records, or display name. Your IP address is visible
+        to Sentry&rsquo;s servers as part of the network connection that
+        delivers a crash event (as with any internet request); our Sentry
+        configuration is set so that the IP address is not stored inside the
+        crash event payload itself.
       </p>
       <p>
         We collect crash data solely to make the app better. We do not sell this
@@ -209,12 +211,11 @@
         on servers in the United States.
       </p>
       <p>
-        <strong>International transfer mechanism</strong>: transfers outside
-        the EEA/UK/Switzerland are protected by applicable lawful safeguards
-        including standard contractual clauses and, where available,
-        certifications recognised by the European Commission, the UK ICO,
-        and the Swiss FDPIC. For details, see
-        <a href="https://sentry.io/privacy/" rel="noopener" target="_blank">Sentry&rsquo;s Privacy Policy</a>.
+        <strong>International transfers</strong>: where crash data is processed
+        outside the EEA/UK/Switzerland, transfers rely on standard contractual
+        clauses. See
+        <a href="https://sentry.io/privacy/" rel="noopener" target="_blank">Sentry&rsquo;s Privacy Policy</a>
+        for details.
       </p>
 
       <h3>4. Map Tiles (Mapbox)</h3>
@@ -241,11 +242,9 @@
         under a Data Processing Agreement.
       </p>
       <p>
-        <strong>International transfer mechanism</strong>: Mapbox&rsquo;s
-        USA processing is covered by lawful transfer mechanisms including
-        standard contractual clauses and applicable Data Privacy Framework
-        certifications. Verify current status via Mapbox&rsquo;s Privacy
-        Policy.
+        <strong>International transfers</strong>: Mapbox&rsquo;s USA processing
+        relies on standard contractual clauses. See Mapbox&rsquo;s Privacy
+        Policy for details.
       </p>
       <p>
         Mapbox may engage its own affiliates for engineering and operations
