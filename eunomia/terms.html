@@ -5,165 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terms of Service &mdash; Eunomia &mdash; Studio Volt</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        background: #0a0a0a;
-        color: #e2e8f0;
-        min-height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #0a0a0a; color: #e2e8f0; min-height: 100vh;
       }
-      .header {
-        padding: 2rem;
-        text-align: center;
-        border-bottom: 1px solid #1e1e1e;
-      }
-      .header h1 {
-        font-size: 1.5rem;
-        font-weight: 800;
-      }
-      .header h1 span {
-        color: #98ffd9;
-      }
-      .header p {
-        color: #94a3b8;
-        margin-top: 0.25rem;
-        font-size: 0.9rem;
-      }
+      .header { padding: 2rem; text-align: center; border-bottom: 1px solid #1e1e1e; }
+      .header h1 { font-size: 1.5rem; font-weight: 800; }
+      .header h1 span { color: #98ffd9; }
+      .header p { color: #94a3b8; margin-top: 0.25rem; font-size: 0.9rem; }
       .nav {
-        display: flex;
-        gap: 1.5rem;
-        justify-content: center;
-        padding: 1rem;
-        border-bottom: 1px solid #1e1e1e;
+        display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
+        padding: 1rem; border-bottom: 1px solid #1e1e1e;
       }
-      .nav a {
-        color: #94a3b8;
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: color 0.2s;
+      .nav a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+      .nav a:hover, .nav a.active { color: #98ffd9; }
+      .langbar {
+        display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+        padding: 0.75rem 1rem; border-bottom: 1px solid #1e1e1e; background: #0d0d0d;
       }
-      .nav a:hover,
-      .nav a.active {
-        color: #98ffd9;
+      .langbar a { color: #64748b; text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+      .langbar a:hover { color: #98ffd9; }
+      .langbar a.active { color: #98ffd9; font-weight: 600; }
+      .content { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+      .content h2 { font-size: 1.3rem; font-weight: 700; margin: 2rem 0 0.5rem; color: #f8fafc; }
+      .content h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; color: #e2e8f0; }
+      .content h4 { font-size: 0.95rem; font-weight: 600; margin: 1.25rem 0 0.4rem; color: #cbd5e1; }
+      .content p { color: #cbd5e1; line-height: 1.7; margin-bottom: 1rem; font-size: 0.95rem; }
+      .content ul, .content ol {
+        color: #cbd5e1; line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; font-size: 0.95rem;
       }
-      .content {
-        max-width: 720px;
-        margin: 0 auto;
-        padding: 2rem 1.5rem 4rem;
+      .content li { margin-bottom: 0.4rem; }
+      .content strong { color: #f8fafc; }
+      blockquote {
+        border-left: 3px solid #98ffd9; background: #111827; border-radius: 8px;
+        padding: 0.75rem 1rem; margin: 1rem 0; color: #cbd5e1;
       }
-      .content h2 {
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin: 2rem 0 0.5rem;
-        color: #f8fafc;
-      }
-      .content h3 {
-        font-size: 1rem;
-        font-weight: 600;
-        margin: 1.5rem 0 0.5rem;
-        color: #e2e8f0;
-      }
-      .content h4 {
-        font-size: 0.95rem;
-        font-weight: 600;
-        margin: 1.25rem 0 0.4rem;
-        color: #cbd5e1;
-      }
-      .content p {
-        color: #cbd5e1;
-        line-height: 1.7;
-        margin-bottom: 1rem;
-        font-size: 0.95rem;
-      }
-      .content ul,
-      .content ol {
-        color: #cbd5e1;
-        line-height: 1.7;
-        margin-bottom: 1rem;
-        padding-left: 1.5rem;
-        font-size: 0.95rem;
-      }
-      .content li {
-        margin-bottom: 0.4rem;
-      }
-      .content strong {
-        color: #f8fafc;
-      }
+      blockquote p { margin-bottom: 0.5rem; }
+      blockquote p:last-child { margin-bottom: 0; }
       .crisis {
-        background: #2a1414;
-        border: 1px solid #5b2424;
-        border-left: 4px solid #fca5a5;
-        border-radius: 12px;
-        padding: 1.5rem;
-        margin: 1.5rem 0 2rem;
+        background: #2a1414; border: 1px solid #5b2424; border-left: 4px solid #fca5a5;
+        border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0 2rem;
       }
-      .crisis h3 {
-        color: #fca5a5;
-        margin-top: 0;
-        font-size: 1.05rem;
+      .crisis h3 { color: #fca5a5; margin-top: 0; font-size: 1.05rem; }
+      .crisis p { color: #f1d6d6; }
+      .crisis ul { color: #f1d6d6; margin-bottom: 0; }
+      .crisis strong { color: #ffffff; }
+      .transnote {
+        background: #111827; border: 1px solid #1f2937; border-left: 4px solid #64748b;
+        border-radius: 10px; padding: 1rem 1.25rem; margin: 1.5rem 0; font-size: 0.85rem;
       }
-      .crisis p {
-        color: #f1d6d6;
-      }
-      .crisis ul {
-        color: #f1d6d6;
-        margin-bottom: 0;
-      }
-      .crisis strong {
-        color: #ffffff;
-      }
-      .audience {
-        background: #1e1e1e;
-        border: 1px solid #2a2a2a;
-        border-left: 4px solid #98ffd9;
-        border-radius: 12px;
-        padding: 1.5rem;
-        margin: 1.5rem 0 2rem;
-      }
-      .audience h3 {
-        color: #98ffd9;
-        margin-top: 0;
-      }
-      .audience strong {
-        color: #f8fafc;
-      }
-      .date {
-        color: #64748b;
-        font-size: 0.85rem;
-        margin-bottom: 1.5rem;
-      }
-      .version {
-        color: #64748b;
-        font-size: 0.85rem;
-      }
-      .caps {
-        text-transform: uppercase;
-        font-weight: 600;
-      }
-      hr {
-        border: none;
-        border-top: 1px solid #1e1e1e;
-        margin: 2rem 0;
-      }
+      .transnote p { color: #94a3b8; margin: 0; }
+      .date { color: #64748b; font-size: 0.85rem; margin-bottom: 1.5rem; }
+      .version { color: #64748b; font-size: 0.85rem; }
+      hr { border: none; border-top: 1px solid #1e1e1e; margin: 2rem 0; }
       footer {
-        text-align: center;
-        padding: 2rem;
-        font-size: 0.8rem;
-        color: #475569;
+        text-align: center; padding: 2rem; font-size: 0.8rem; color: #475569;
         border-top: 1px solid #1e1e1e;
       }
-      footer .made {
-        margin-top: 0.4rem;
-        color: #64748b;
-      }
-      a {
-        color: #98ffd9;
-      }
+      footer .made { margin-top: 0.4rem; color: #64748b; }
+      a { color: #98ffd9; }
     </style>
   </head>
   <body>
@@ -176,310 +77,161 @@
       <a href="/eunomia/privacy.html">Privacy Policy</a>
       <a href="/eunomia/terms.html" class="active">Terms of Service</a>
     </nav>
+    <div class="langbar">
+      <a href="/eunomia/terms.html" class="active">English</a>
+      <a href="/eunomia/terms.pl.html">Polski</a>
+      <a href="/eunomia/terms.fr.html">Français</a>
+      <a href="/eunomia/terms.de.html">Deutsch</a>
+    </div>
     <div class="content">
-      <h2>Terms of Service &mdash; Eunomia</h2>
-      <p class="version">Version 1.3</p>
-      <p class="date">Last updated: 2026-05-25</p>
-
+      <h2>Terms of Service — Eunomia</h2>
+      <p class="version"><strong>Version 1.6</strong></p>
+      <p class="date"><strong>Last updated: 2026-06-17</strong></p>
+      <hr />
       <div class="crisis">
-        <h3>&#9888; Important notice &mdash; please read first</h3>
-        <p>
-          <strong
-            >Eunomia is a personal reflection tool. It is NOT a substitute for
-            professional mental health care, counseling, or medical advice.
-            Eunomia does not diagnose, treat, or cure any condition.</strong
-          >
-        </p>
-        <p>
-          <strong
-            >If you are in crisis or feel you may be a danger to yourself or
-            others, contact a qualified professional or local emergency
-            services immediately:</strong
-          >
-        </p>
-        <ul>
-          <li><strong>EU</strong>: 112 (general emergency)</li>
-          <li>
-            <strong>US</strong>: 988 (Suicide &amp; Crisis Lifeline) or 911
-          </li>
-          <li><strong>UK</strong>: 999 or Samaritans 116 123</li>
-          <li>
-            <strong>Switzerland</strong>: 143 (Die Dargebotene Hand) or 144
-          </li>
-          <li><strong>Poland</strong>: Telefon Zaufania 116 123</li>
-        </ul>
+        <h3>&#9888; Important notice — please read first</h3>
+    <p><strong>Eunomia is a personal reflection tool. It is NOT a substitute for professional mental health care, counseling, or medical advice. Eunomia does not diagnose, treat, or cure any condition.</strong></p>
+    <p><strong>If you are in crisis or feel you may be a danger to yourself or others, contact a qualified professional or local emergency services immediately:</strong></p>
+    <ul>
+        <li><strong>EU</strong>: 112 (general emergency)</li>
+        <li><strong>US</strong>: 988 (Suicide &amp; Crisis Lifeline) or 911</li>
+        <li><strong>UK</strong>: 999 or Samaritans 116 123</li>
+        <li><strong>Switzerland</strong>: 143 (Die Dargebotene Hand) or 144</li>
+      </ul>
       </div>
-
+      <hr />
       <h3>1. Acceptance</h3>
-      <p>
-        These Terms form a binding agreement between you (&ldquo;you&rdquo;) and
-        <strong
-          >Joanna Bednarczyk, an independent developer based in Switzerland,
-          operating under the trade name &ldquo;Studio Volt&rdquo;</strong
-        >
-        (&ldquo;the developer&rdquo;, &ldquo;I&rdquo;). By downloading,
-        installing, or using Eunomia (the &ldquo;App&rdquo;), you agree to these
-        Terms. If you do not agree, do not use the App.
-      </p>
-      <p>
-        You must be at least <strong>17 years old</strong> to use Eunomia,
-        consistent with the App Store age rating.
-      </p>
-
-      <div class="audience">
-        <h3>2. Important &mdash; who Eunomia is for</h3>
-        <p>
-          Eunomia is a personal reflection tool intended for adults in stable
-          mental health who want to organize their day-to-day thoughts. It is
-          not a substitute for professional mental health care.
-        </p>
-        <p>
-          If you are in distress or crisis, please contact a qualified
-          professional or local emergency services (see the numbers in the
-          box above).
-        </p>
-      </div>
-
-      <h3>3. Limitation of liability &mdash; independent developer</h3>
-      <p>
-        Eunomia is provided by an independent individual developer, not a
-        corporation, hospital, clinic, or licensed practitioner. The developer
-        is not a mental health professional and Eunomia provides no professional
-        service of any kind.
-      </p>
+      <p>These Terms form a binding agreement between you (&quot;you&quot;) and <strong>Joanna Bednarczyk, an independent developer based in Switzerland, operating under the trade name &quot;Studio Volt&quot;</strong> (&quot;the developer&quot;, &quot;I&quot;). By downloading, installing, or using Eunomia (the &quot;App&quot;), you agree to these Terms. If you do not agree, do not use the App.</p>
+      <p>You must be at least <strong>17 years old</strong> to use Eunomia. This is a requirement of these Terms based on the app&#x27;s intended audience; it is separate from the App Store age rating, which reflects content classification only.</p>
+      <hr />
+      <h3>2. Important — who Eunomia is for</h3>
+      <p>Eunomia is a personal reflection and self-improvement tool for people in stable mental health who want to think more clearly about their day-to-day experiences. It is built around journaling and structured self-reflection, drawing loose inspiration from cognitive techniques.</p>
+      <p>Eunomia is NOT designed for, and is not appropriate for, people who:</p>
+      <ul>
+        <li>are experiencing a mental health crisis, suicidal thoughts, or self-harm urges</li>
+        <li>have a diagnosed mental health condition requiring professional treatment</li>
+        <li>are using or seeking medical advice, diagnosis, or therapy</li>
+        <li>are minors under 17 (Eunomia&#x27;s intended audience is adults; this exclusion is set by these Terms, not by the App Store age rating, which reflects content classification only)</li>
+      </ul>
+      <p>If any of the above applies to you, please stop using Eunomia and contact a qualified professional or local crisis services:</p>
+      <ul>
+        <li>🇪🇺 EU: 112 · Telefon Zaufania PL: 116 123</li>
+        <li>🇺🇸 US: 988 (Suicide &amp; Crisis Lifeline)</li>
+        <li>🇬🇧 UK: 116 123 (Samaritans)</li>
+        <li>🇨🇭 CH: 143 (Die Dargebotene Hand) · 144 (medical emergency)</li>
+      </ul>
+      <hr />
+      <h3>3. Limitation of liability — independent developer</h3>
+      <p>Eunomia is provided by an independent individual developer, not a corporation, hospital, clinic, or licensed practitioner. The developer is not a mental health professional and Eunomia provides no professional service of any kind.</p>
       <p>The developer assumes no responsibility for:</p>
       <ul>
-        <li>
-          your mental, emotional, or psychological state, before, during, or
-          after using the app
-        </li>
-        <li>
-          decisions you make based on suggestions, AI parsing, or reframes
-          generated within the app
-        </li>
-        <li>
-          actions you take in response to your reflections or AI output
-        </li>
-        <li>
-          outcomes of conversations you have with others using content exported
-          from the app
-        </li>
-        <li>
-          any loss, harm, distress, or consequence &mdash; emotional or
-          otherwise &mdash; arising from your use
-        </li>
+        <li>your mental, emotional, or psychological state, before, during, or after using the app</li>
+        <li>decisions you make based on suggestions, AI parsing, or reframes generated within the app</li>
+        <li>actions you take in response to your reflections or AI output</li>
+        <li>outcomes of conversations you have with others using content exported from the app</li>
+        <li>any action, inaction, or harm to yourself or to any third party arising from content you wrote in the app or from AI-generated suggestions, including content concerning self-harm, harm to others, or unlawful acts</li>
+        <li>any loss, harm, distress, or consequence — emotional or otherwise — arising from your use</li>
       </ul>
-      <p>
-        You use Eunomia entirely at your own discretion and risk. By installing
-        and opening the app, you accept that this is a personal tool, not a
-        service rendered by a professional, and that the developer&rsquo;s
-        liability is strictly limited to the price you paid (if any) within the
-        last 6 months &mdash; not exceeding 100 USD or local equivalent.
-      </p>
-
+      <p>You use Eunomia entirely at your own discretion and risk, and you assume all risk arising from that use. By installing and opening the app, you accept that this is a personal tool, not a service rendered by a professional.</p>
+      <p><strong>To the maximum extent permitted by applicable law,</strong> and except for liability that cannot be excluded or limited under mandatory law (including liability for death or personal injury caused by negligence, for fraud, or for gross negligence or wilful misconduct where such liability cannot be excluded), the developer&#x27;s total aggregate liability to you arising out of or relating to the App or these Terms is strictly limited to the greater of (a) the total amount you actually paid for the App in the six (6) months preceding the event giving rise to the claim, or (b) <strong>10 USD</strong> — and in no event exceeding <strong>100 USD</strong> or its local-currency equivalent. The developer is not liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for any loss of data, profit, goodwill, or anticipated savings, even if advised of the possibility of such damages.</p>
+      <p>Nothing in this section limits or excludes any liability that cannot lawfully be limited or excluded, or any non-waivable rights you have under the mandatory law of your country of residence.</p>
+      <hr />
       <h3>4. License</h3>
-      <p>
-        A personal, non-exclusive, non-transferable, revocable license is
-        granted to you to install and use Eunomia on Apple devices you own or
-        control, in accordance with the Apple Media Services Terms and these
-        Terms. You may not:
-      </p>
+      <p>A personal, non-exclusive, non-transferable, revocable license is granted to you to install and use Eunomia on Apple devices you own or control, in accordance with the Apple Media Services Terms and these Terms. You may not:</p>
       <ul>
-        <li>
-          copy, modify, reverse engineer, or create derivative works of the App,
-        </li>
+        <li>copy, modify, reverse engineer, or create derivative works of the App,</li>
         <li>rent, lease, lend, or sublicense it,</li>
         <li>circumvent paid features or usage limits,</li>
-        <li>use the App to violate any law or anyone&rsquo;s rights.</li>
+        <li>use the App to violate any law or anyone&#x27;s rights.</li>
       </ul>
-      <p>
-        The developer retains all rights, title, and interest in Eunomia,
-        including its name, logo, content, and code.
-      </p>
-
+      <p>The developer retains all rights, title, and interest in Eunomia, including its name, logo, content, and code.</p>
+      <hr />
       <h3>5. The App is a self-reflection tool</h3>
-      <p>
-        Eunomia helps you write down and structure your thoughts using the
-        Padesky 7-column journaling method. Any AI features generate
-        suggestions based on the text you provide. These suggestions:
-      </p>
+      <p>Eunomia helps you write down and structure your thoughts using the Padesky 7-column journaling method. Any AI features generate suggestions based on the text you provide. These suggestions:</p>
       <ul>
         <li>are not professional advice,</li>
         <li>are not personalized care,</li>
         <li>may be inaccurate, incomplete, or unsuitable for your situation,</li>
-        <li>
-          should not be relied on for any decision regarding your health,
-          safety, or wellbeing.
-        </li>
+        <li>should not be relied on for any decision regarding your health, safety, or wellbeing.</li>
       </ul>
-      <p>
-        Use Eunomia as you would a private notebook. If you need support,
-        please reach out to a qualified professional or trusted person.
-      </p>
-
+      <p>Use Eunomia as you would a private notebook. If you need support, please reach out to a qualified professional or trusted person.</p>
+      <h4>AI processing — on-device vs Cloud AI (and when Cloud AI is required)</h4>
+      <p>Eunomia uses two AI paths to turn reflections into structured 7-column records:</p>
+      <p>1. <strong>Apple Intelligence (on-device)</strong> — when your iPhone supports it AND your speech language is among those Apple Intelligence supports (currently English, German, French, Italian, Spanish, Portuguese, Japanese, Korean, Chinese, Dutch, Swedish, Danish, Norwegian, Turkish, Vietnamese, and a small number of others — Apple&#x27;s list changes over time and I do not control it). On-device processing means your text does not leave your iPhone. 2. <strong>Cloud AI</strong> — your reflection text is sent through my Cloudflare Worker proxy to a third-party AI provider and the structured result returns to you. The proxy is designed not to retain the content of your reflection beyond the time needed to service the request; only an anonymous token counter is kept for billing. The third-party AI provider handles your text under <strong>its own API terms and data-processing terms</strong>, which currently provide that API inputs are not used to train its models and are retained only for a limited period (typically up to 30 days) for abuse monitoring before deletion. Those terms are set by the provider, may change, and are not within the developer&#x27;s control; the developer makes no independent warranty as to the provider&#x27;s processing. Apple-Intelligence-style on-device privacy does not apply to Cloud AI. The current provider is listed in the Privacy Policy.</p>
+      <p><strong>Cloud AI is opt-in for supported languages and required for unsupported languages.</strong></p>
+      <p>If your iPhone&#x27;s speech language is one Apple Intelligence does not support (Polish is the current canonical example), Apple&#x27;s on-device AI cannot parse your reflections in that language. In that case, Cloud AI is the only path that produces a meaningful Padesky structure. Eunomia will:</p>
+      <ul>
+        <li>show a clear consent screen during onboarding explaining this before any text is sent,</li>
+        <li>offer you a starting trial of 2 free Cloud AI parses,</li>
+        <li>let you decline. <strong>If you decline, the app&#x27;s structured AI parsing features will not work for entries in that language.</strong> You can still record audio and read raw transcripts, but the 7-column structure will not be filled in automatically; you can write it in by hand.</li>
+        <li>let you change your mind at any time in Settings → AI &amp; Privacy.</li>
+      </ul>
+      <p>By using the app you acknowledge that this is a fair design trade-off given the current state of on-device AI language coverage, and that you remain in control of when and whether your text leaves your device.</p>
+      <hr />
+      <h3>5a. No monitoring; no emergency service</h3>
+      <p>Eunomia is not monitored by any person. The developer does not read, review, monitor, or moderate your entries, and is under no obligation to do so. Eunomia may, on a best-effort basis and entirely on your device, recognise some words associated with distress and respond by showing crisis-resource information; this is a convenience feature, not a safety system. It will miss many cases, may trigger when nothing is wrong, and must never be relied upon to detect a crisis, summon help, contact anyone, or alert any emergency service. Eunomia cannot and does not contact emergency services, professionals, family, or any third party on your behalf. If you need help, you must contact the resources listed above yourself.</p>
+      <hr />
       <h3>6. Subscriptions, top-ups, and auto-renewal</h3>
-      <p>
-        Eunomia offers a free trial and several paid subscription tiers.
-        Current tiers and prices are shown in-app and managed by Apple&rsquo;s
-        App Store.
-      </p>
-
+      <p>Eunomia offers a free trial and several paid subscription tiers. Current tiers and prices are shown in-app and managed by Apple&#x27;s App Store.</p>
       <h4>Auto-renewal disclosures (required by Apple)</h4>
       <ul>
-        <li>
-          <strong>Title of the subscription</strong>: shown in-app at the time
-          of purchase (for example, &ldquo;Premium&rdquo; or &ldquo;Power&rdquo;).
-        </li>
-        <li>
-          <strong>Length of the subscription</strong>: monthly, unless stated
-          otherwise at purchase.
-        </li>
-        <li>
-          <strong>Price of the subscription</strong>: shown in-app in your
-          local currency at the time of purchase.
-        </li>
-        <li>
-          <strong>Payment will be charged to your Apple Account</strong> at
-          confirmation of purchase.
-        </li>
-        <li>
-          <strong>The subscription automatically renews</strong> for the same
-          period unless auto-renewal is turned off at least 24 hours before the
-          end of the current period.
-        </li>
-        <li>
-          <strong>Your account will be charged for renewal</strong> within 24
-          hours prior to the end of the current period at the price of the
-          selected plan.
-        </li>
-        <li>
-          <strong>You can manage and cancel your subscriptions</strong> by
-          going to your Apple Account settings on your device after purchase.
-          Cancellation takes effect at the end of the current paid period.
-        </li>
-        <li>
-          <strong>Any unused portion of a free trial period</strong>, if
-          offered, will be forfeited when you purchase a paid subscription.
-        </li>
+        <li><strong>Title of the subscription</strong>: shown in-app at the time of purchase (for example, &quot;Premium&quot; or &quot;Power&quot;).</li>
+        <li><strong>Length of the subscription</strong>: monthly, unless stated otherwise at purchase.</li>
+        <li><strong>Price of the subscription</strong>: shown in-app in your local currency at the time of purchase.</li>
+        <li><strong>Payment will be charged to your Apple Account</strong> at confirmation of purchase.</li>
+        <li><strong>The subscription automatically renews</strong> for the same period unless auto-renewal is turned off at least 24 hours before the end of the current period.</li>
+        <li><strong>Your account will be charged for renewal</strong> within 24 hours prior to the end of the current period at the price of the selected plan.</li>
+        <li><strong>You can manage and cancel your subscriptions</strong> by going to your Apple Account settings on your device after purchase. Cancellation takes effect at the end of the current paid period.</li>
+        <li><strong>Any unused portion of a free trial period</strong>, if offered, will be forfeited when you purchase a paid subscription.</li>
       </ul>
-
       <h4>Top-ups</h4>
-      <p>
-        One-time top-ups (such as additional AI tokens) are non-subscription
-        in-app purchases. They do not auto-renew and are consumed as you use
-        the app.
-      </p>
-
+      <p>One-time top-ups (such as additional AI tokens) are non-subscription in-app purchases. They do not auto-renew and are consumed as you use the app.</p>
       <h4>Refunds</h4>
-      <p>
-        All purchases are processed by Apple. Refund requests are handled by
-        Apple under their refund policy. To request a refund, visit
-        <a
-          href="https://reportaproblem.apple.com"
-          rel="noopener"
-          target="_blank"
-          >reportaproblem.apple.com</a
-        >. The developer does not have the ability to issue refunds directly.
-      </p>
-
+      <p>All purchases are processed by Apple. Refund requests are handled by Apple under their refund policy. To request a refund, visit <strong>reportaproblem.apple.com</strong>. The developer does not have the ability to issue refunds directly.</p>
+      <hr />
       <h3>7. Acceptable use</h3>
       <p>You agree not to:</p>
       <ul>
         <li>use Eunomia for anything illegal, harmful, or abusive,</li>
-        <li>attempt to access another user&rsquo;s data or backend systems,</li>
-        <li>interfere with the App&rsquo;s operation or security,</li>
-        <li>
-          use the optional Cloud AI feature to submit content that is illegal,
-          that infringes someone&rsquo;s rights, or that violates OpenAI&rsquo;s
-          usage policies (which apply because Cloud AI uses OpenAI as a
-          sub-processor).
-        </li>
+        <li>attempt to access another user&#x27;s data or backend systems,</li>
+        <li>interfere with the App&#x27;s operation or security,</li>
+        <li>use the optional Cloud AI feature to submit content that is illegal, that infringes someone&#x27;s rights, or that violates the AI provider&#x27;s usage policies (which apply because Cloud AI uses a third-party AI provider as a sub-processor).</li>
       </ul>
-      <p>
-        The developer may suspend or revoke access to paid features if you
-        violate these Terms.
-      </p>
-
+      <p>The developer has no obligation to monitor content but may remove access, refuse processing, or take other action if content submitted to Cloud AI is unlawful or violates the AI provider&#x27;s policies. The developer does not thereby assume any duty to monitor.</p>
+      <hr />
       <h3>8. Disclaimer of warranties</h3>
-      <p>
-        <strong class="caps"
-          >The App is provided &ldquo;as is&rdquo; and &ldquo;as
-          available&rdquo;</strong
-        >, without warranty of any kind, express or implied, including
-        warranties of merchantability, fitness for a particular purpose, or
-        non-infringement. The developer does not warrant that the App will be
-        uninterrupted, error-free, secure against all attacks, or that AI
-        suggestions will be accurate or appropriate.
-      </p>
-      <p>
-        To the maximum extent permitted by law, all warranties not expressly
-        stated in these Terms are disclaimed.
-      </p>
-
+      <p>The App is provided <strong>&quot;as is&quot; and &quot;as available&quot;</strong>, without warranty of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, or non-infringement. The developer does not warrant that the App will be uninterrupted, error-free, secure against all attacks, or that AI suggestions will be accurate or appropriate.</p>
+      <p>To the maximum extent permitted by law, all warranties not expressly stated in these Terms are disclaimed. Some jurisdictions do not allow the exclusion of certain implied warranties, so some of the above exclusions may not apply to you; in that case such warranties are limited to the minimum scope and shortest duration permitted by mandatory law.</p>
+      <hr />
+      <h3>8a. Indemnification</h3>
+      <p>To the maximum extent permitted by applicable law, you agree to indemnify, defend, and hold harmless the developer from and against any third-party claims, demands, losses, liabilities, damages, and reasonable expenses (including reasonable legal fees) arising out of or related to: (a) your misuse of the App; (b) your breach of these Terms; (c) content you submit through the optional Cloud AI feature that is unlawful or infringes a third party&#x27;s rights; or (d) your violation of any law or of the rights of any third party. This section does not apply to the extent a claim arises from the developer&#x27;s own gross negligence or wilful misconduct, and does not require you to indemnify the developer where doing so is prohibited by the mandatory consumer-protection law of your country of residence.</p>
+      <hr />
       <h3>9. Termination</h3>
-      <p>
-        You may stop using Eunomia at any time by uninstalling the App. The
-        developer may suspend or terminate your access if you breach these
-        Terms or if the App is discontinued. Sections that by their nature
-        should survive termination (license restrictions, disclaimers,
-        limitations of liability, governing law) will survive.
-      </p>
-
+      <p>You may stop using Eunomia at any time by uninstalling the App. The developer may suspend or terminate your access if you breach these Terms or if the App is discontinued. Sections that by their nature should survive termination (license restrictions, disclaimers, limitations of liability, governing law) will survive.</p>
+      <hr />
       <h3>10. Assignment and successor entity</h3>
-      <p>
-        The developer is currently an individual sole operator. These Terms may
-        be assigned to a successor entity (e.g., <strong>Studio Volt GmbH</strong>
-        or <strong>Studio Volt SA</strong>) once incorporated, with full
-        continuity of obligations to existing users. No additional consent from
-        you is required for such assignment, provided that your rights under
-        these Terms are not materially diminished.
-      </p>
-
+      <p>The developer is currently an individual sole operator. The developer may assign, novate, or transfer these Terms and the App, in whole or in part, to any successor or affiliated entity (e.g., <strong>Studio Volt GmbH</strong> or <strong>Studio Volt SA</strong>) once incorporated, or in connection with a merger, reorganisation, or sale of assets. On such transfer the successor entity assumes the developer&#x27;s obligations to you under these Terms going forward, and the developer is released from those obligations to the extent they are assumed. No additional consent from you is required for such assignment, provided your rights under these Terms are not materially diminished. You may not assign or transfer your rights or obligations under these Terms without the developer&#x27;s prior written consent.</p>
+      <hr />
       <h3>11. Changes to these Terms</h3>
-      <p>
-        These Terms may be updated from time to time. If material changes are
-        made, the version and &ldquo;last updated&rdquo; date above will be
-        updated and you will be notified in-app before the change takes effect.
-        Continued use after the effective date means you accept the new Terms.
-      </p>
-
+      <p>These Terms may be updated from time to time. If material changes are made, the version and &quot;last updated&quot; date above will be updated and you will be notified in-app before the change takes effect. Continued use after the effective date means you accept the new Terms.</p>
+      <hr />
       <h3>12. Governing law and dispute resolution</h3>
-      <p>
-        These Terms are governed by the laws of <strong>Switzerland</strong>,
-        without regard to its conflict-of-laws rules. Any dispute will be
-        brought in the competent <strong>Swiss courts</strong>, except where
-        mandatory consumer-protection law in your country of residence gives
-        you the right to bring proceedings in your local courts.
-      </p>
-      <p>
-        Nothing in this section limits any non-waivable consumer rights you
-        have under the law of your country of residence.
-      </p>
-
+      <p>These Terms are governed by the laws of <strong>Switzerland</strong>, without regard to its conflict-of-laws rules. Any dispute will be brought in the competent <strong>Swiss courts</strong>, except where mandatory consumer-protection law in your country of residence gives you the right to bring proceedings in your local courts.</p>
+      <p>Nothing in this section limits any non-waivable consumer rights you have under the law of your country of residence.</p>
+      <hr />
+      <h3>12a. Severability, waiver, and entire agreement</h3>
+      <p>If any provision of these Terms is held invalid, unlawful, or unenforceable by a court of competent jurisdiction, that provision will be enforced to the maximum extent permissible and modified to the minimum degree necessary to make it valid, and the remaining provisions will continue in full force and effect. The developer&#x27;s failure to enforce any provision is not a waiver of the right to enforce it later. These Terms, together with the Privacy Policy and the Apple Media Services Terms, constitute the entire agreement between you and the developer regarding the App and supersede any prior understanding on that subject.</p>
+      <hr />
       <h3>13. Apple-specific terms</h3>
-      <p>
-        These Terms supplement Apple&rsquo;s End User License Agreement.
-        Apple is a third-party beneficiary of these Terms and may enforce
-        them against you.
-      </p>
-
+      <p>You acknowledge that these Terms are between you and Joanna Bednarczyk (operating under the trade name &quot;Studio Volt&quot;), not Apple, and that Apple is not responsible for the App or its content. Apple has no obligation to provide maintenance or support for the App. In the event the App fails to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price (if any). To the maximum extent permitted by law, Apple has no other warranty obligation. Apple is a third-party beneficiary of these Terms and may enforce them against you.</p>
+      <hr />
       <h3>14. Contact</h3>
       <ul>
-        <li>
-          Support:
-          <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>
-        </li>
-        <li>
-          Legal:
-          <a href="mailto:contact@studiovolt.dev">contact@studiovolt.dev</a>
-        </li>
-        <li>
-          Web:
-          <a href="https://studiovolt.dev/eunomia/terms.html"
-            >studiovolt.dev/eunomia/terms.html</a
-          >
-        </li>
+        <li>Support: <strong>contact@studiovolt.dev</strong></li>
+        <li>Legal: <strong>contact@studiovolt.dev</strong></li>
+        <li>Web: <strong>studiovolt.dev/terms</strong></li>
       </ul>
+      <p>Made in Switzerland 🇨🇭</p>
     </div>
     <footer>
       &copy; 2026 Studio Volt &middot; <a href="/">studiovolt.dev</a>
