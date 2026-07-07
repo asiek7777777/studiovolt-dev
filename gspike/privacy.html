@@ -190,51 +190,41 @@
         transmitted off-device by the App.
       </p>
 
-      <h3>3. Crash &amp; Error Reports &mdash; Sentry</h3>
+      <h3>3. Crash &amp; Diagnostic Reports &mdash; Sentry</h3>
       <p>
         To detect and fix bugs, the App uses
         <a href="https://sentry.io" rel="noopener" target="_blank">Sentry</a>
-        for anonymous crash reporting. When the App crashes or encounters an
-        unhandled error, the following technical information is sent to Sentry's
-        infrastructure:
-      </p>
-      <ul>
-        <li>Stack trace and error message</li>
-        <li>Device model, iOS version, App version</li>
-        <li>
-          Anonymous Sentry install identifier (auto-generated UUID per install)
-        </li>
-        <li>
-          Anonymous diagnostic breadcrumbs (e.g. which screen was open when the
-          error occurred)
-        </li>
-      </ul>
-      <p>
-        Your IP address is visible to Sentry's servers as part of the network
-        connection that delivers a crash event (this is true of any internet
-        request). Our Sentry configuration is set so that the IP address is
-        <strong>not</strong> stored inside the crash event payload itself.
-        Sentry retains incoming connection metadata under its own server-log
-        practices for up to 30 days.
+        (operated by Sentry / Functional Software, Inc., USA) as a diagnostics
+        provider. When the App crashes or hits an unhandled error, technical
+        diagnostic data is sent to Sentry: the error and stack trace, diagnostic
+        breadcrumbs (e.g. which screen was open), device model, operating-system
+        version, App version, and an app-generated install identifier.
       </p>
       <p>
-        Crash reports do <strong>not</strong> include your G-force readings,
-        session history, personal records, name, email address, or any account
-        identifier (because there are no accounts). The App is configured to
-        minimise the collection of personally identifiable information by
-        Sentry.
+        As with any internet request, your device's IP address is visible to
+        Sentry's servers when a report is delivered. Sentry may process this
+        data, including the IP address, on servers in the United States. We have
+        configured the App to minimise the personal data sent, and we do not
+        attach your name, email, account, or any G-force/session data to these
+        reports (the App has no accounts and never transmits your session data).
+        We have configured Sentry so that your IP address is
+        <strong>not</strong> stored with the diagnostic report.
       </p>
       <p>
-        <strong>Purpose:</strong> detect and fix bugs.<br />
-        <strong>Legal basis:</strong> our legitimate interest in app
-        stability. You may object &mdash; see &ldquo;Your Rights&rdquo;
-        below.<br />
-        <strong>Provider:</strong> Sentry &mdash; see
-        <a href="https://sentry.io/privacy/" rel="noopener" target="_blank">sentry.io/privacy</a>
-        for their DPA and transfer mechanisms.
+        Diagnostic reports are retained by Sentry for a limited period
+        (typically 30&ndash;90 days depending on Sentry's retention tier) and
+        are then deleted automatically.
       </p>
       <p>
-        We do not sell crash report data and do not use it for advertising.
+        <strong>Purpose:</strong> detect and fix bugs and app errors.<br />
+        <strong>Legal basis:</strong> our legitimate interest in app stability
+        (GDPR Art 6(1)(f)); you may object &mdash; see &ldquo;Your
+        Rights&rdquo; below.<br />
+        <strong>International transfer:</strong> data sent to Sentry in the USA
+        is protected by Standard Contractual Clauses under Sentry's
+        data-processing agreement (see
+        <a href="https://sentry.io/privacy/" rel="noopener" target="_blank">sentry.io/privacy</a>).
+        We do not sell this data and do not use it for advertising.
       </p>
 
       <h3>4. Data Retention</h3>
@@ -250,12 +240,9 @@
           one device removes it from both.
         </li>
         <li>
-          <strong>Crash reports</strong> (Sentry): Up to 30 days (Sentry
-          Developer plan retention), then automatically deleted by Sentry.
-        </li>
-        <li>
-          <strong>Sentry server connection logs</strong> (IP): Up to 30 days
-          under Sentry's own log retention policy.
+          <strong>Diagnostic reports</strong> (Sentry): retained by Sentry for
+          a limited period (typically 30&ndash;90 days depending on Sentry's
+          retention tier), then deleted automatically.
         </li>
         <li>We do not retain any other data about you.</li>
       </ul>
@@ -315,10 +302,9 @@
       </p>
       <ul>
         <li>
-          <strong>Diagnostics</strong> (Crash Data, Performance Data, Other
-          Diagnostic Data) &mdash; used for App functionality only,
-          <strong>not</strong> linked to your identity, <strong>not</strong>
-          used to track you.
+          <strong>Diagnostics</strong> (Crash Data) &mdash; used for App
+          functionality only, <strong>not</strong> linked to your identity,
+          <strong>not</strong> used to track you.
         </li>
         <li>
           <strong>Identifiers</strong> (anonymous Sentry install ID) &mdash;
