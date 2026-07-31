@@ -124,7 +124,7 @@
     </nav>
     <div class="content">
       <h2>Privacy Policy &mdash; Flight Metrics</h2>
-      <p class="date">Last updated: 1 June 2026</p>
+      <p class="date">Last updated: 7 July 2026</p>
       <p>
         This Privacy Policy explains how Flight Metrics (the &ldquo;App&rdquo;)
         handles your data, what limited technical information our third-party
@@ -186,23 +186,33 @@
 
       <h3>2.1 Crash &amp; Error Reports &mdash; Sentry</h3>
       <p>
-        When the App crashes or encounters an error, the following is sent
-        to Sentry's EU-hosted infrastructure:
+        When the App crashes or encounters an error (production builds
+        only), the following is sent to Sentry's <strong>EU-hosted</strong>
+        infrastructure (de.sentry.io, primary processing in Germany):
       </p>
       <ul>
         <li>Stack trace and error message</li>
         <li>Device model, iOS/Android version, App version</li>
-        <li>Anonymous Sentry install identifier (UUID per install)</li>
-        <li>Your IP address (logged by Sentry's servers &mdash; retained up to 30 days)</li>
-        <li>Anonymous diagnostic breadcrumbs (e.g. which screen was open)</li>
+        <li>An anonymous, auto-generated Sentry install identifier (UUID)</li>
+        <li>
+          Diagnostic breadcrumbs (e.g. which screen was open), with any
+          location-like values removed before sending
+        </li>
       </ul>
       <p>
+        We have configured Sentry <strong>not to store your IP
+        address</strong> (server-side IP storage is disabled and
+        IP-derived geolocation is scrubbed), and the SDK is set to
+        <strong>not</strong> send personal data (sendDefaultPii off).
+        Sentry acts as our processor under a GDPR Art. 28 DPA. Limited
+        support and backup functions may involve Sentry sub-processors
+        located outside the EU under Standard Contractual Clauses (see
+        Section 9).
+      </p>
+      <p>
         <strong>Purpose:</strong> detect and fix bugs.<br />
-        <strong>Legal basis:</strong> our legitimate interest in app
-        stability. You may object &mdash; see &ldquo;Your Rights&rdquo; below.<br />
-        <strong>Provider:</strong> see
-        <a href="https://sentry.io/privacy/">Sentry&rsquo;s Privacy Policy</a>
-        for their DPA and transfer mechanisms.
+        <strong>Legal basis:</strong> legitimate interest in app stability
+        (you may object &mdash; see &ldquo;Your Rights&rdquo; below).
       </p>
 
       <h3>2.2 Subscription Management &mdash; RevenueCat, Inc. (USA)</h3>
@@ -233,30 +243,23 @@
 
       <h3>2.3 Map Tiles &mdash; Mapbox, Inc. (USA)</h3>
       <p>
-        When you view the map screen, your device requests map tiles from
-        Mapbox. Each request transmits:
+        When you view the map, your device requests map tiles from Mapbox.
+        Each request transmits:
       </p>
       <ul>
         <li>
           Your IP address (used by Mapbox to deliver tiles and prevent abuse)
         </li>
         <li>Device model, OS version, App version</li>
-        <li>
-          Anonymous Mapbox SDK telemetry (e.g. tile load performance) &mdash;
-          you can disable this in
-          <em>Settings &rarr; About &rarr; Mapbox Telemetry</em>
-        </li>
       </ul>
       <p>
-        <strong>Purpose:</strong> display maps for visualising flight
-        routes.<br />
-        <strong>Legal basis:</strong> our legitimate interest in providing
-        map functionality.<br />
-        <strong>Provider:</strong> Mapbox&rsquo;s USA processing relies on
-        standard contractual clauses. See
-        <a href="https://www.mapbox.com/legal/privacy">Mapbox&rsquo;s Privacy Policy</a>
-        and
-        <a href="https://www.mapbox.com/telemetry">Telemetry settings</a>.
+        We have <strong>disabled Mapbox&rsquo;s analytics/telemetry
+        SDK</strong> in the App, so no Mapbox usage telemetry is sent from
+        your device. Mapbox acts as our processor under a GDPR Art. 28
+        DPA; US transfers are covered by Mapbox&rsquo;s <strong>EU-US Data
+        Privacy Framework self-certification</strong> (verified active)
+        and Standard Contractual Clauses. See
+        <a href="https://www.mapbox.com/legal/privacy">Mapbox&rsquo;s Privacy Policy</a>.
       </p>
 
       <h3>2.4 Payment Processing &mdash; Apple Inc.</h3>
@@ -339,9 +342,15 @@
 
       <h3>6. International Data Transfers</h3>
       <p>
-        Some processors (RevenueCat, Mapbox) are based in the USA. Transfers
-        to them rely on standard contractual clauses. See each
-        processor&rsquo;s Privacy Policy linked above for details.
+        Flight data never leaves your device. For the limited technical
+        data above: Sentry processing is primarily in the EU
+        (de.sentry.io), with limited support/backup functions potentially
+        involving SCC-covered sub-processors outside the EU. RevenueCat
+        (USA) relies on <strong>Standard Contractual Clauses</strong> (it
+        is <strong>not</strong> DPF-certified). Mapbox (USA) is
+        <strong>DPF self-certified</strong> and additionally covered by
+        SCCs. See each processor&rsquo;s DPA/Privacy Policy in Sections 2
+        and 9.
       </p>
 
       
@@ -380,6 +389,23 @@
         recent revision. Material changes will be announced in the App's
         release notes.
       </p>
+      <p>
+        <strong>Change log:</strong>
+      </p>
+      <ul>
+        <li>
+          <strong>7 July 2026</strong> &mdash; Section 2.1 corrected to
+          reflect that Sentry is configured not to store your IP address
+          (server-side IP storage disabled and IP-derived geolocation
+          scrubbed) and that the SDK does not send personal data;
+          Section 2.3 corrected to remove a reference to a non-existent
+          in-app Mapbox telemetry setting and to state that Mapbox&rsquo;s
+          analytics/telemetry SDK is disabled in the App; Section 6
+          updated to describe Sentry&rsquo;s EU-primary processing with
+          SCC-covered sub-processors and to restate RevenueCat (SCC-only)
+          and Mapbox (DPF + SCC) transfer bases.
+        </li>
+      </ul>
 
       <h3>11. Contact</h3>
       <p>
