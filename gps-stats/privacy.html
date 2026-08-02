@@ -124,7 +124,7 @@
     </nav>
     <div class="content">
       <h2>Privacy Policy &mdash; GPS Stats</h2>
-      <p class="date">Last updated: 1 June 2026</p>
+      <p class="date">Last updated: 2 August 2026</p>
       <p>
         This Privacy Policy explains how GPS Stats handles your data. The data
         controller is <strong>Joanna Bednarczyk</strong>, independent developer,
@@ -137,24 +137,30 @@
         <h3>The Short Version</h3>
         <ul>
           <li>
-            All your GPS and session data stays on your device &mdash; we have
+            Your GPS and session data is stored on your device &mdash; we have
             no servers
           </li>
           <li>There are no user accounts or logins</li>
           <li>
-            We collect anonymous crash reports to improve the app &mdash;
-            nothing personal
+            We collect crash and stability diagnostics (via Sentry) to fix bugs
+            &mdash; not linked to your identity, and never your GPS data
+          </li>
+          <li>
+            Map tiles are loaded from Mapbox; this transmits your IP address but
+            not your recorded tracks or sessions
           </li>
           <li>We do not sell or share any of your data</li>
         </ul>
       </div>
 
-      <h3>1. Your Data Stays on Your Device</h3>
+      <h3>1. Your Data Is Stored on Your Device</h3>
       <p>
         GPS Stats stores all tracking data (GPS coordinates, speed, altitude,
         session history, personal records) locally on your device in an
-        on-device database. This data never leaves your device unless you
-        explicitly choose to share it using the Share feature.
+        on-device database. The app does not transmit this data anywhere; it is
+        shared only if you explicitly choose to share it using the Share
+        feature. Your device&rsquo;s own iOS backup, if enabled, may include app
+        data like any other app &mdash; you control this in iOS settings.
       </p>
       <p>
         There are no user accounts, no logins, and no cloud storage. We do not
@@ -181,41 +187,46 @@
         to view.
       </p>
 
-      <h3>3. Crash Reports (Sentry)</h3>
+      <h3>3. Crash &amp; Stability Diagnostics (Sentry)</h3>
       <p>
-        To improve the app and fix bugs, we use
+        To find and fix bugs, GPS Stats uses
         <a href="https://sentry.io" rel="noopener" target="_blank">Sentry</a>
-        for anonymous crash reporting. When the app crashes, the following
-        technical data is sent:
-      </p>
-      <ul>
-        <li>Device model and OS version</li>
-        <li>App version</li>
-        <li>Error details (stack trace)</li>
-      </ul>
-      <p>
-        Crash reports do <strong>not</strong> include your GPS data, speed,
-        location, personal records, or display name. Your IP address is visible
-        to Sentry&rsquo;s servers as part of the network connection that
-        delivers a crash event (as with any internet request); our Sentry
-        configuration is set so that the IP address is not stored inside the
-        crash event payload itself.
+        to collect two categories of technical diagnostics:
+        <strong>crash and error reports</strong>, and
+        <strong>periodic stability and performance diagnostics</strong> (such as
+        counts of crash-free sessions and app-responsiveness timings collected
+        during normal use). These reports contain technical data: device model,
+        operating-system version, app version, error/stack-trace details, and
+        randomly generated, app-created identifiers (an install identifier and,
+        in some reports, a session identifier) used only to group related
+        reports.
       </p>
       <p>
-        We collect crash data solely to make the app better. We do not sell this
-        data.
+        This data is <strong>not</strong> linked to your identity and does
+        <strong>not</strong> include your GPS coordinates, routes, speed,
+        personal records, or display name. We configure Sentry not to attach
+        personal identifiers to reports. These diagnostics are used solely for
+        app stability &mdash; not for behavioural analytics, advertising, or
+        marketing.
       </p>
       <p>
-        <strong>Sub-processor</strong>: Sentry acts as our data processor
-        under a Data Processing Addendum. Crash report data may be processed
-        on servers in the United States.
+        Like any internet request, connecting to Sentry involves your
+        device&rsquo;s IP address in transit; it is used only to deliver the
+        report and is not stored against a personal profile or used to track
+        you.
       </p>
       <p>
-        <strong>International transfers</strong>: where crash data is processed
-        outside the EEA/UK/Switzerland, transfers rely on standard contractual
-        clauses. See
-        <a href="https://sentry.io/privacy/" rel="noopener" target="_blank">Sentry&rsquo;s Privacy Policy</a>
-        for details.
+        <strong>Sub-processor</strong>: Sentry (Functional Software, Inc.),
+        acting as our processor under a data-processing agreement. Diagnostic
+        data is ingested and stored on Sentry&rsquo;s European Union
+        data-residency infrastructure; any residual transfer outside the
+        EEA/UK/Switzerland is safeguarded by EU Standard Contractual Clauses.
+      </p>
+      <p>
+        Diagnostics are kept only as long as needed to diagnose stability
+        issues and are then deleted automatically under Sentry&rsquo;s
+        retention schedule. For details, see
+        <a href="https://sentry.io/privacy/" rel="noopener" target="_blank">Sentry&rsquo;s Privacy Policy</a>.
       </p>
 
       <h3>4. Map Tiles (Mapbox)</h3>
@@ -231,20 +242,20 @@
       </ul>
       <p>
         Mapbox SDK telemetry is <strong>disabled</strong> in the app, so no
-        anonymous usage analytics are collected by Mapbox beyond what is needed
-        to serve tiles.
-        <strong>No GPS coordinates, routes, personal records, or session
-        data</strong>
-        are sent to Mapbox.
+        usage analytics are collected by Mapbox beyond what is needed to serve
+        tiles.
+        <strong>The app does not send your recorded GPS coordinates, routes,
+        personal records, or session data to Mapbox.</strong>
+        As with any online map, the tiles your device requests necessarily
+        indicate the approximate geographic area shown on screen.
       </p>
       <p>
         <strong>Sub-processor</strong>: Mapbox acts as our data processor
         under a Data Processing Agreement.
       </p>
       <p>
-        <strong>International transfers</strong>: Mapbox&rsquo;s USA processing
-        relies on standard contractual clauses. See Mapbox&rsquo;s Privacy
-        Policy for details.
+        <strong>International transfers</strong>: Mapbox processes data in the
+        USA under EU Standard Contractual Clauses.
       </p>
       <p>
         Mapbox may engage its own affiliates for engineering and operations
@@ -265,10 +276,9 @@
           and we never retain copies.
         </li>
         <li>
-          <strong>Crash reports</strong> (Sentry): Retained for up to
-          <strong>30 days</strong> (Sentry Developer plan retention), then
-          automatically deleted by Sentry. We do not extend retention beyond 30
-          days.
+          <strong>Diagnostics</strong> (Sentry): kept only as long as needed to
+          diagnose stability issues, then automatically deleted by Sentry under
+          its retention schedule. We do not keep separate copies.
         </li>
         <li>
           <strong>Map tile request logs</strong> (Mapbox): Retained by Mapbox
@@ -306,14 +316,14 @@
           personal records inside the app
         </li>
         <li>
-          <strong>Object / restrict processing</strong>: disable crash reporting
-          by contacting us; we will provide instructions to disable Sentry on
-          your device
+          <strong>Object / restrict processing</strong>: you can object to
+          diagnostics reporting by contacting us (see below)
         </li>
         <li>
-          <strong>Crash-report deletion</strong>: request deletion of crash
-          report data by emailing us. We will process your request within 30
-          days (Sentry's automatic deletion cycle).
+          <strong>Diagnostic-report deletion</strong>: request deletion of
+          diagnostic report data by emailing us. We will act on your request
+          within a reasonable period consistent with Sentry&rsquo;s retention
+          schedule.
         </li>
         <li>
           <strong>Portability</strong>: export individual sessions via the
@@ -321,30 +331,35 @@
         </li>
       </ul>
       <p>
-        If you reside in the EU/EEA, nothing in this policy or our Terms of
-        Service affects your rights under mandatory consumer protection laws of
-        your country of residence.
+        If you reside in the EU/EEA/UK/Switzerland, nothing in this policy or
+        our Terms of Service affects your rights under mandatory consumer
+        protection laws of your country of residence.
       </p>
 
       <h3>8. App Store Privacy</h3>
-      <p>In accordance with Apple's App Store privacy requirements:</p>
+      <p>
+        In accordance with Apple&rsquo;s App Store privacy requirements, the
+        GPS Stats App Store page declares the following data categories &mdash;
+        all used for app functionality only, <strong>not</strong> linked to
+        your identity and <strong>not</strong> used to track you across apps or
+        websites:
+      </p>
       <ul>
         <li>
-          <strong>Precise Location</strong>: Used for app functionality only
-          &mdash; not linked to your identity, not used to track you across
-          apps or websites
+          <strong>Precise Location</strong> &mdash; read from your
+          device&rsquo;s sensors for the app&rsquo;s measurement and map
+          features; stored on your device (Sections 1&ndash;2)
         </li>
         <li>
-          <strong>Diagnostics</strong> (Sentry crash data, performance
-          breadcrumbs, anonymous install ID): Used for app functionality only
-          &mdash; not linked to your identity
+          <strong>Device ID</strong> &mdash; the randomly generated, app-scoped
+          install identifier used to group diagnostic reports (Section 3)
         </li>
-        <li>No other data types are collected</li>
+        <li>
+          <strong>Crash Data, Performance Data, and Other Diagnostic
+          Data</strong> &mdash; the crash, stability, and performance
+          diagnostics described in Section 3
+        </li>
       </ul>
-      <p>
-        These declarations match the App Privacy section published on the GPS
-        Stats App Store page.
-      </p>
 
       <h3>9. Children</h3>
       <p>
