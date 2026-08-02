@@ -182,14 +182,12 @@
         Data Processing Agreement (DPA) compliant with GDPR Art. 28. None of these providers receives your recorded flight data, name, or email address. Map-tile requests necessarily indicate which map areas your device displays or downloads (see Section 2.3).
       </p>
 
-      <h3>2.1 Crash &amp; Error Reports &mdash; Sentry</h3>
+      <h3>2.1 Crash Reports &amp; Technical Diagnostics &mdash; Sentry</h3>
       <p>
-        When the App crashes or encounters an error (production builds
-        only), the following is sent to Sentry's <strong>EU-hosted</strong>
-        infrastructure (de.sentry.io, primary processing in Germany):
+        In production builds only, the App sends two kinds of technical reports to Sentry&rsquo;s <strong>EU-hosted</strong> infrastructure (de.sentry.io, primary processing in Germany): (a) <strong>crash and error reports</strong>, when the App crashes or encounters an error, and (b) <strong>a small number of predefined technical diagnostic events</strong> marking steps of key App flows &mdash; for example, the purchase screen being shown, or a purchase succeeding, failing, being cancelled, or restored. Each report contains:
       </p>
       <ul>
-        <li>Stack trace and error message</li>
+        <li>Stack trace and error message (for crashes and errors) or a short, predefined event name (for diagnostic events)</li>
         <li>Device model, iOS/Android version, App version</li>
         <li>An anonymous, auto-generated Sentry install identifier (UUID)</li>
         <li>
@@ -208,9 +206,8 @@
         Section 9).
       </p>
       <p>
-        <strong>Purpose:</strong> detect and fix bugs.<br />
-        <strong>Legal basis:</strong> legitimate interest in app stability
-        (you may object &mdash; see &ldquo;Your Rights&rdquo; below).
+        <strong>Purpose:</strong> detect and fix bugs, and understand where technical failures occur in flows such as the purchase flow.<br />
+        <strong>Legal basis:</strong> legitimate interest in app stability and the correct functioning of the App (you may object &mdash; see &ldquo;Your Rights&rdquo; below).
       </p>
 
       <h3>2.2 Subscription Management &mdash; RevenueCat, Inc. (USA)</h3>
@@ -275,7 +272,7 @@
         <li>
           We do not use behavioural analytics or marketing trackers (no
           Google Analytics, no Facebook Pixel, no AppsFlyer, no Adjust,
-          no Amplitude, no Mixpanel).
+          no Amplitude, no Mixpanel). The technical diagnostic events described in Section 2.1 are used to diagnose whether core App flows work correctly &mdash; not to profile you, personalise content, or advertise.
         </li>
         <li>We do not sell, rent, or share your data with data brokers.</li>
         <li>
@@ -295,7 +292,7 @@
           your device until you delete them in the App or uninstall it.
         </li>
         <li>
-          <strong>Sentry crash data:</strong> up to 30 days.
+          <strong>Sentry crash and diagnostic data:</strong> up to 30 days.
         </li>
         <li>
           <strong>RevenueCat subscription data:</strong> for the lifetime of
@@ -390,7 +387,7 @@
         <strong>Change log:</strong>
       </p>
       <ul>
-        <li><strong>2 August 2026</strong> &mdash; Section 2.3 now discloses that the destination name typed in the offline-map search is sent to Mapbox&rsquo;s geocoding service (not stored by us, not linked to your identity); Section 2 clarified that map-tile requests indicate displayed/downloaded map areas; Section 8 adds a standard note that no transmission or storage method is completely secure.</li>
+        <li><strong>2 August 2026</strong> &mdash; Section 2.3 now discloses that the destination name typed in the offline-map search is sent to Mapbox&rsquo;s geocoding service (not stored by us, not linked to your identity); Section 2 clarified that map-tile requests indicate displayed/downloaded map areas; Section 8 adds a standard note that no transmission or storage method is completely secure. Section 2.1 retitled &ldquo;Crash Reports &amp; Technical Diagnostics&rdquo;: starting with App version 1.0.3, the App also sends a small number of predefined technical diagnostic events (steps of key flows such as the purchase flow) to Sentry &mdash; the same anonymous technical data as crash reports, with no new data types, no flight data, and no location; Sections 3 and 4 clarified accordingly.</li>
 <li><strong>1 August 2026</strong> &mdash; Editorial simplification: removed an internal detail about the crash-report provider’s plan tier in Section 4 and streamlined the wording of Sections 9 and 11. No change to what data is processed or to your rights.</li>
 <li>
           <strong>7 July 2026</strong> &mdash; Section 2.1 corrected to
